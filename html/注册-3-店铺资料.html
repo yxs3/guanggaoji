@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>注册</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/register.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js" type="text/javascript"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+<header id="head">
+	<img src="../images/bg_03.jpg" width="100%">
+	<div class="h-box">
+		<div class="h-progress active">
+			<div class="h-num">1</div>
+			绑定手机
+		</div>
+		<div class="h-progress active">
+			<div class="h-num">2</div>
+			营业执照
+		</div>
+		<div class="h-progress active-green">
+			<div class="h-num">3</div>
+			店铺资料
+		</div>
+		<div class="h-progress">
+			<div class="h-num">4</div>
+			绑定银行卡
+		</div>
+	</div>
+</header>
+<div class="body pb120">
+	<div class="b-form mt-7 b-bank b-info">
+		<div class="b-group">
+			<div class="img i-company"></div>
+			<div class="b-label">店铺名</div>
+			<input type="text" placeholder="输入店铺全称">
+			<div class="error-text">公司名称不能为空</div>
+		</div>
+		<div class="b-group pl190">
+			<div class="img i-bphone"></div>
+			<div class="b-label">店铺电话</div>
+			<div class="b-p-box">
+				<input type="text" placeholder="0755-">
+				<a href="javascript:" class="img3"></a>
+			</div>
+			<div class="b-p-box">
+				<input type="text" placeholder="0755">
+				<a href="javascript:" class="img3 over"></a>
+			</div>
+			<div class="error-text"></div>
+		</div>
+		<div class="b-group">
+			<div class="img i-hy"></div>
+			<div class="b-label">行业</div>
+			<select>
+				<option value="">请选择一级类目</option>
+			</select>
+			<select>
+				<option value="">请选择二级类目</option>
+			</select>
+			<div class="error-text"></div>
+		</div>
+		<div class="b-group b-line l170">
+			<div class="img i-yy"></div>
+			<div class="b-label">营业日</div>
+			<div class="b-day">
+                <a href="javascript:" class="checkbox check">周一</a>
+                <a href="javascript:" class="checkbox">周二</a>
+                <a href="javascript:" class="checkbox">周三</a>
+                <a href="javascript:" class="checkbox">周四</a>
+                <a href="javascript:" class="checkbox">周五</a>
+                <a href="javascript:" class="checkbox">周六</a>
+                <a href="javascript:" class="checkbox">周日</a>
+                <a href="javascript:" class="checkbox">全部</a>
+            </div>
+			<div class="error-text"></div>
+		</div>
+		<div class="b-group pl190">
+			<div class="img i-time"></div>
+			<div class="b-label">营业时间</div>
+			<div class="b-day center">
+				<select class="fl">
+					<option value="">开始时间</option>
+				</select>
+				<span class="span">至</span>
+				<select class="fr">
+					<option value="">结束时间</option>
+				</select>
+				<div class="clearfix"></div>
+				<a href="javascript:" class="checkbox check">24小时营业</a>
+			</div>
+			<div class="error-text"></div>
+		</div>
+		<div class="b-group addr">
+			<div class="img i-baddr"></div>
+			<div class="b-label">地址</div>
+			<select>
+				<option value="">省</option>
+			</select>
+			<select>
+				<option value="">市</option>
+			</select>
+			<select>
+				<option value="">区</option>
+			</select>
+			<div class="error-text"></div>
+		</div>
+		<div class="b-group addr2">
+			<div class="img i-baddr2"></div>
+			<input type="text" placeholder="请输入详细地址">
+			<div class="error-text"></div>
+		</div>
+		<div class="b-location">
+			<div class="b-l-t">
+				<div class="fl">公司定位</div>
+				<div class="fr one-line"><div class="img3"></div>广东省深圳市宝安区前进二路区域经济...</div>
+			</div>
+			<div class="b-l-b">
+				<div class="img3"></div>
+				<p>如果自动定位不准确，请手动定位您的公司精准位置
+				或者公司附近明显建筑</p>
+			</div>
+		</div>
+		<div class="b-map"><!--psd标注地图不可让用户移动 b-mask遮罩层-->
+			<div class="b-m-ctrl">
+				<input type="text" placeholder="输入模糊地址" id="searchplace">
+				<a href="javascript:" class="img3" id="s_p_search_btn"></a>
+			</div>
+			<div class="b-m-content" id="searchlist">
+				<!-- 空提示 -->
+				<!-- <div class="b-nothing" style="display: none;">
+					<img src="../images/nothing.png">
+					未搜索到匹配的地点
+				</div>
+				<div class="b-list">
+					<ul>
+						<li>
+							<div>我的位置</div>
+							广东深圳市
+						</li>
+						<li>
+							<div>深圳市民中心</div>
+							广东省深圳市福田区福中三路
+						</li>
+						<li>
+							<div>深圳福田香格里拉大酒店</div>
+							广东省深圳市福田区益田路4088号(近CocoPark购...
+						</li>
+						<li>
+							<div>深圳博物馆</div>
+							广东省深圳市福田区福中三路市民中心A区
+						</li>
+						<li>
+							<div>深圳市民中心</div>
+							广东省深圳市福田区福中三路
+						</li>
+						<li>
+							<div>深圳福田香格里拉大酒店</div>
+							广东省深圳市福田区益田路4088号(近CocoPark购...
+						</li>
+					</ul>
+					<div class="b-more">正在加载更多...</div>
+				</div> -->
+			</div>
+			<div id="map"></div>
+		</div>
+		<div class="b-group">
+			<div class="img i-zz"></div>
+			<div class="b-label">店铺照</div>
+			 <ul class="b-shop-img">
+			 	<li class="load"><a class="m-del">x</a><img src="../images/bg.jpg" alt=""></li>
+			 	<li class="b-zz">
+					<input type="file" accept="image/jpg,image/jpeg,image/png">
+					<div class="b-tip"><div class="img2"></div>上传照片</div>
+				</li>
+			 </ul>
+			<div class="error-text"></div>
+		</div>
+		<div class="b-t-group">
+			<div class="b-tit">经营内容</div>
+			<textarea class="textarea" placeholder="请输入经营内容，不超过200字...."></textarea>
+			<div class="error-text"></div>
+		</div>
+		<div class="b-t-group">
+			<div class="b-tit">品牌故事</div>
+			<textarea class="textarea" placeholder="请输入品牌故事，不超过200字...."></textarea>
+			<div class="error-text"></div>
+		</div>
+	</div>
+	<div class="p-n-ctrl">
+		<a href="javascript:history.go(-1)" class="fl"><div class="img"></div>上一步</a>
+		<a href="注册-4-绑定银行卡.html" class="fr">下一步</a>
+	</div>
+</div>
+<div id="mask"></div>
+<!-- 删除弹出层 start -->
+  <div class="check-alert c-del">
+    <div class="center">是否删除图片？</div>
+    <div class="a-btn">
+      <a href="javascript:">取消</a>
+      <a href="javascript:">确定</a>
+    </div>
+  </div>
+<!-- 删除弹出层 end -->
+</body>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=yx8CKXGT9WI5GLgxmjhYgTuO"></script>
+<script>
+require(['jquery'],function($){
+
+	$('.m-del').bind('click',function(){
+			$('.c-del,#mask').show();
+	})
+	$('.check-alert a:nth-child(1),#mask').bind('click',function(){
+		$('.c-del,#mask').hide();
+	})
+
+	function initMap(){
+                createMap();//创建地图
+                setMapEvent();//设置地图事件
+            }
+        //创建地图函数：
+        function createMap(){
+			map = new BMap.Map("map");
+            var point = new BMap.Point(113.867176, 22.62024);
+			var mdar = new BMap.Icon('images/map.png', new BMap.Size(60, 60), {});
+            var marker = new BMap.Marker(point, {icon: mdar});
+			map.centerAndZoom(point, 19);
+            map.addOverlay(marker);
+            window.map = map;//将map变量存储在全局
+        }
+        //地图事件设置函数：
+        function setMapEvent(){
+            map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+            map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+            map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+            map.enableKeyboard();//启用键盘上下左右键移动地图
+        }
+        
+        initMap();//创建和初始化地图
+        createSearch();
+        createAutocomlete();
+        $("#s_p_search_btn").click(function () {
+            searchPlace($("#searchplace").val());
+        });
+        function createSearch() {
+            var map = window.map;
+            var local = new BMap.LocalSearch(map,
+                {
+                    renderOptions: { map: map, panel: "searchlist" }
+                });
+            window.local = local;
+        }
+        //搜索
+        function searchPlace(value) {
+            window.local.search(value);
+        }
+        function createAutocomlete() {
+            var map = window.map;
+            var ac = new BMap.Autocomplete(    //建立一个自动完成的对象
+                {
+                    "input": "searchplace",
+                    "location": map
+                });
+            ac.addEventListener("onconfirm", function (e) {    //鼠标点击下拉列表后的事件
+                var _value = e.item.value;
+                var addr =_value.business+ _value.province + _value.city + _value.district + _value.street + _value.streetNumber ;
+                searchPlace(addr);
+            });
+        }
+        
+        //单击获取点击的经纬度
+	    map.addEventListener("click",function(e){
+	        var jing_du_value = e.point.lng;
+	        var wei_du_value =  e.point.lat;
+	        console.log(e.point.lng + "," + e.point.lat);
+	    });
+})
+</script>
+</html>

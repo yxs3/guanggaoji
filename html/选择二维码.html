@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>绑定成功</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/subpage.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+<!--头部start-->
+<div class="head-tit">
+		<a href="javascript:history.go(-1);" class="return"></a>
+	选择二维码
+	</div>
+<!--头部end-->
+<div class="qr-code">
+     <div class="bdff">
+          <!--选择二维码 没有时 显示-->
+          <div class="hollow-show hidden">
+              <img src="../images/qr_code/void_img.png">
+              <div class="cr-red m-b-t">您还未上传任何二维码</div>
+              <div class="fs-cr66 le-ht45">
+                  <div>如需要广告机左上角的二维码</div>
+                  <div>使用自定义二维码，请此页面</div>   
+                  <div>进行上传和管理！</div>
+                  <div class="height210"></div>
+              </div>             
+          </div>
+          <!--选择二维码 没有时 显示-->
+          <div class="code">
+            <img src="../images/qr_code/qr-_code.jpg">
+          </div>
+          <div class="title-hint">船旗舰店客服标题二维码<img src="../images/qr_code/writing_pad.png"></div>
+          <div class="btn-a">
+             <a class="hidden"><img src="../images/succeed_02.png">确认使用</a>
+             <a class="fn hidden">正在使用</a>
+          </div>
+          <div class="pg10"> 
+              <div class="bd-wh">
+                   <div class="pg15">
+                     <div class="left">需要<i class="blue">批量设置</i>或<i class="blue">管理二维码</i>？</div>
+                     <div class="red right"><a href="">前往设置</a></div>
+                  </div>
+              </div> 
+          </div>
+          <div class="prompt-b">
+              <div class="img-a">
+                     <div class="mn img-b">广告机默认显示E键云通二维码；</div>
+                     <div class="img-b">E键刷商户默认显示E键刷支付码；</div>
+              </div>
+          </div>
+     </div>
+     <div class="height125"></div>
+</div>
+<!--描述弹框-->
+<div class="mask hidden"></div>
+<div class="bomb-box hidden">
+     <div class="pg20 br-b">
+         <input type="text" placeholder="请输入二维码描述">
+         <div class="fs-cr99 right">还可输入15字</div>
+     </div>
+     <div class="bottom">
+       <a class="br-r">取消</a>
+       <a class="blue br-l">提交</a>	
+     </div>
+</div>
+<!--描述弹框-->
+<script>
+require(['jquery'],function(){
+var n=$(window).height()
+var m=$("body").height()
+m=n
+$("body").addClass("bd_bule")
+})
+</script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>意见反馈</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" href="../css/reset.css">
+<link href="../css/subpage.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+<script src="../js/require.min.js"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+<!--头部start-->
+ <div class="head-tit">
+		<a href="javascript:history.go(-1);" class="return"></a>
+		申请广告机
+	</div>
+<!--头部end-->
+<!--内容start-->
+<div class="refund-page">
+    <div class="page-width">
+              <div class="border">
+                 <span><i>*</i>机型数量</span>
+                 <a href="代理商-选择机型.html" class=""><input type="text" placeholder="选择广告机机型数量"> </a>
+                 <!--选择机型数量后显示-->
+                 <div class="record hidden">
+                    <div>42英寸交互型无线一体机<i class="rt">×3</i></div>
+                    <div>21英寸电梯无线广告机<i class="rt">×3</i></div>
+                    <div>22英寸室外广告机英寸<i class="rt"> ×6</i></div>
+                 </div>
+                <!--选择机型数量后显示-->
+             </div>
+   </div>
+    <div class="page-width br">
+      <div class="border">
+          <div class="left">申请说明</div>
+          <div class="right">还可以输入50字</div>
+          <textarea class="mb55" style="color:#999999">想说点什么...</textarea>
+       </div>
+    </div>
+    <a  class="bottom" href="代理商-发送成功.html">提交申请</a><!--蓝色加bd-blue-->
+</div>
+<!--内容end-->
+</body>
+<script>
+require(['jquery'],function(){
+      $(".page-width textarea").focus(function(){
+		  if($(this).val()=="想说点什么..."){
+			  $(this).val("")
+			   $(this).css("color","#333")
+			  }
+			  })
+			  $(".page-width textarea").blur(function(){
+		  if($(this).val()==""){
+			      $(this).val("想说点什么...")
+				  $(this).css("color","#999")
+			  }
+		  })
+
+})
+</script>
+</html>

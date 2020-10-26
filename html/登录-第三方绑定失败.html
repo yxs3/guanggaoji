@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>绑定手机</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/subpage.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+<header class="entry_img">
+   <img src="../images/fail.jpg"	 class="register">
+   <span>用于修改密码，身份识别等账户等操作；</span>
+   <span>绑定专属手机号，提升你的账户安全性；</span>
+</header>
+<div class="centent margin_top">
+ <div class="ico_img top">
+   <img src="../images/ico_b_a.png" class="width120">
+   <span>绑定失败</span>
+ </div>
+ <div class="middle">
+    <span>由于未知原因导致绑定失败</span>
+    <span>请返回重新绑定</span>
+ </div>
+ <div class="bottom">
+    <span>3秒后自动返回绑定界面</span>
+ </div>
+</div>
+<div class="height230"></div>
+<footer class="br_top">
+      <a class="manage_heart" href="登录-第三方绑定账号.html">返回绑定账号</a>
+
+</footer>
+</body>
+<script>
+require(['jquery'],function(){
+var n=$(window).height()
+var m=$("body").height()
+m=n
+$("body").addClass("bd_bule")
+})
+</script>
+</html>

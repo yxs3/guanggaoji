@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>提交成功</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" href="../css/reset.css">
+<link href="../css/subpage.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+<script src="../js/require.min.js"></script>
+<script src="../js/config.js"></script>
+
+</head>
+<body style="background:#fff">
+<!--头部start-->
+ <div class="head-tit">
+		<a href="javascript:history.go(-1);" class="return"></a>
+		意见反馈
+	</div>
+<!--头部end-->
+<!--内容start-->
+<div class="apply-succeed">
+     <div class="wrapper m-t212">
+        <img src="../images/ico_success_blue.png">
+        <span class="bule">发送成功</span>
+        <span class="">您的反馈我们已经收到<i>感谢您对我们的宝贵意见</i></span>
+        <span class="fs-cr66 margin-t-b wh">3秒后自动返回首页</span>
+     </div>
+</div>
+<!--内容end-->
+</body>
+<script>
+require(['jquery'],function(){
+	  var i=3;
+  setInterval(function() {
+	  if(i>0){
+		i--
+		  };
+      $(".wrapper .margin-t-b").html(i+'秒后自动返回首页');
+	 if(i==0){
+	    window.location.href=""
+	                }
+	  },1000)
+});
+</script>
+</html>

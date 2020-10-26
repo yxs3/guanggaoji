@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+    <meta content="telephone=no" name="format-detection" />
+    <title>E键广告</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/register.css">
+    <!-- JavaScript -->
+    <script src="../js/require.min.js" type="text/javascript"></script>
+    <script src="../js/config.js"></script>
+</head>
+
+<body id="app">
+    <!-- 头部 -->
+    <div class="head-tit">
+        <a href="javascript:history.go(-1);" class="return"></a>
+        添加银行卡
+    </div>
+    <div class="gray-tit">
+        您所填写的内容会经过加密处理，以避免信息泄露，请放心填写
+    </div>
+    <div class="body re-style" style="display: none;" v-show="view">
+        <div class="b-form mt-7 b-bank">
+            <div class="b-group">
+                <div class="img i-addr"></div>
+                <div class="b-label">开户地</div>
+                <select @change="getAddr" v-html="province" v-model="selected">
+				<option value="">请选择</option>
+			</select>
+                <select @change="getAddr2" v-html="city" v-model="selected2">
+			</select>
+                <select v-html="area" v-model="selected3">
+			</select>
+                <div class="error-text" v-show="showError1">请选择完整的地址信息</div>
+            </div>
+            <div class="b-group">
+                <div class="img i-bank"></div>
+                <div class="b-label">银行</div>
+                <select v-model="bank" @change="clear(5),passCheck">
+				<option value="">请选择银行</option>
+				<option value="工商银行">工商银行</option>
+				<option value="农业银行">农业银行</option>
+				<option value="中国银行">中国银行</option>
+				<option value="建设银行">建设银行</option>
+				<option value="交通银行">交通银行</option>
+				<option value="邮政储蓄">邮政储蓄</option>
+				<option value="光大银行">光大银行</option>
+				<option value="民生银行">民生银行</option>
+				<option value="广发银行">广发银行</option>
+				<option value="平安银行">平安银行</option>
+				<option value="招商银行">招商银行</option>
+				<option value="兴业银行">兴业银行</option>
+				<option value="浦发银行">浦发银行</option>
+				<option value="北京银行">北京银行</option>
+				<option value="上海银行">上海银行</option>
+			</select>
+                <div class="error-text" v-show="showError5">请选择银行</div>
+            </div>
+            <div class="b-group">
+                <div class="img i-bankaddr"></div>
+                <div class="b-label">支行</div>
+                <input type="text" placeholder="输入支行信息" v-model="bankAddr" @focus="clear(2)" @keyup="passCheck">
+                <div class="error-text" v-show="showError2">请填写支行信息</div>
+            </div>
+            <div class="b-group">
+                <div class="img i-user"></div>
+                <div class="b-label">开户人</div>
+                <input type="text" placeholder="输入开户人姓名" v-model="user" @focus="clear(3)" @keyup="passCheck">
+                <div class="error-text" v-show="showError3">请填写开户人姓名</div>
+            </div>
+            <div class="b-group">
+                <div class="img i-banknum"></div>
+                <div class="b-label">卡号</div>
+                <input type="tel" placeholder="输入银行卡卡号" v-model="bankNum" @focus="clear(4)" @keyup="blank">
+                <div class="error-text" v-show="showError4">请填写银行卡号</div>
+            </div>
+        </div>
+        <!-- 所有内容填写完毕时增加blue类名-->
+        <a class="floor-layer" @click="check" v-bind:class='{blue:pass}'>
+		提交
+	</a>
+    </div>
+    <div class="h110"></div>
+<link rel="stylesheet" href="../js/layer/skin/layer.css">
+</body>
+<script>
+    require(['jquery', 'vue', 'layer'], function($, Vue) {
+        new Vue({
+            el: ".body",
+            data: {
+                province: '<option value="1">市</option>',
+                selected: '',
+                selected2: '',
+                selected3: '',
+                city: '<option value="1">市</option>',
+                area: '<option value="2">区</option>',
+                bank: '',
+                bankAddr: '',
+                user: '',
+                bankNum: '',
+                showError1: false, //错误显示
+                showError2: false,
+                showError3: false,
+                showError4: false,
+                showError5: false,
+                view: false,
+                pass: false
+            },
+            mounted: function() {
+                var _this = this;
+                this.$nextTick(function() {
+                    _this.view = true;
+                    // $.get('/agents/info/regionchange',{'pid':1},function(data){
+                    // 	_this.province = data.dropDownList;
+                    // },'json')
+                });
+            },
+            methods: {
+                blank: function() {
+                    var _this = this,
+                        real = _this.bankNum.replace(/\s/g, '');
+                    if (real.length % 4 == 0 && real.length != 0) {
+                        _this.bankNum += ' ';
+                    }
+                    _this.passCheck();
+                },
+                getAddr: function() {
+                    var _this = this;
+                    _this.showError1 = false;
+                    $.get('/agents/info/regionchange', {
+                        'pid': _this.selected
+                    }, function(data) {
+                        _this.city = data.dropDownList;
+                    }, 'json')
+                },
+                getAddr2: function() {
+                    var _this = this;
+                    _this.showError1 = false;
+                    $.get('/agents/info/regionchange', {
+                        'pid': _this.selected2
+                    }, function(data) {
+                        _this.area = data.dropDownList;
+                    }, 'json')
+                },
+                check: function() {
+                    var _this = this;
+                    if (!_this.pass) {
+                        return false;
+                    }
+                    if (_this.selected == '' || _this.selected2 == '' || _this.selected3 == '') {
+                        _this.showError1 = true;
+                        return false;
+                    } else if (_this.bank == '') {
+                        _this.showError5 = true;
+                        return false;
+                    } else if (_this.bankAddr == '') {
+                        _this.showError2 = true;
+                        return false;
+                    } else if (_this.user == '') {
+                        _this.showError3 = true;
+                        return false;
+                    } else if (_this.bankNum == '') {
+                        _this.showError4 = true;
+                        return false;
+                    }
+
+                    //         var sendData ={'bankname':_this.bank,'user':_this.user,'bankcard':_this.bankNum,'p_id':_this.selected,'city_id':_this.selected2,'area_id':_this.selected3,'address':_this.bankAddr};
+
+                    //          $.post('/agents/info/addbank',sendData,function(data){
+                    // 	if(data.state){
+                    // 		setTimeout(function() {window.location.href="/agents/info/viewbank";}, 2000);
+                    // 	}else{
+                    // 		alert(data.msg);
+                    // 	}
+                    // },'json');			        	
+                },
+                clear: function(num) {
+                    var _this = this;
+                    switch (num) {
+                        case 2:
+                            _this.showError2 = false;
+                            break;
+                        case 3:
+                            _this.showError3 = false;
+                            break;
+                        case 4:
+                            _this.showError4 = false;
+                            break;
+                        case 5:
+                            _this.showError5 = false;
+                            break;
+                    }
+                },
+                passCheck: function() {
+                    var _this = this;
+                    if (_this.selected != '' && _this.selected2 != '' && _this.selected3 != '' && _this.bank != '' && _this.bankAddr != '' && _this.user != '' && _this.bankNum != '') {
+                        _this.pass = true;
+                    } else {
+                        _this.pass = false;
+                    }
+                }
+            }
+        });
+    })
+</script>
+
+</html>

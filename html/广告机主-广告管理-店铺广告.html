@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>E键广告</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/main.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js" type="text/javascript"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+		<div class="head-tit">
+			<a href="javascript:history.go(-1);" class="return"></a>
+	        <div class="h-sea">
+				广告管理
+				<a href="javascript:" class="h-btn"><img src="../images/ico_1.png"></a>
+	        </div>
+	        <div class="h-input">
+	        	<div class="h-input-box">
+					<input type="text" placeholder="请输入广告编码或广告名">
+					<a href="javascript:" class="h-btn"><img src="../images/ico_1.png"></a>
+				</div>
+				<a href="javascript:" class="h-btn">取消</a>
+	        </div>
+		</div>
+	<!-- 切换 -->
+	<div class="switch-link clearfix">
+		<a href="广告机主-广告管理.html">共享广告</a>
+		<a href="广告机主-广告管理-店铺广告.html" class="active">店铺广告</a>
+	</div>
+	<!-- 切换 -->
+	<div class="switch-ad type2">
+		<a href="javascript:" class="active">投放中</a>
+		<a href="javascript:">已暂停</a>
+		<a href="javascript:">待投放</a>
+		<a href="javascript:">审核状态</a>
+		<a href="javascript:">已结束</a>
+	</div>
+	<!-- 内容 -->
+	<!-- 搜索空提示 -->
+	<div class="nothing" style="display: none;">
+		<img src="../images/nothing02.png" style="width:5rem;">
+		未找到相关信息
+	</div>
+	<!-- 空广告提示 -->
+	<div class="nothing" style="display: none;">
+		<img src="../images/nothing03.png" style="width:5rem;">
+		未找到相关广告
+	</div>
+	<div class="ad-content">
+		<div class="ad-list">
+			<div class="a-tip">共找到<span class="blue">351</span>个<span class="blue">投放中</span>的店铺广告</div>
+			<ul>
+				<li>
+					<a href="广告机主-店铺广告详情.html">
+						<div class="fl v-img"><i></i><img src="../images/user.png" alt="广告"></div>
+						<div class="a-text">
+							<div class="clearfix">
+								<div class="a-name one-line">牛奶推广</div>
+								<div class="a-code">EJYT3244332542</div>
+							</div>
+							<div>投放时间：2017-04-17 14:00:35</div>
+							<div>截止时间：2017-04-18 12:00:50</div>
+							<div>广告机：共投放23台</div>
+							<div class="a-ctrl a-img a1"></div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="广告机主-店铺广告详情.html">
+						<div class="fl v-img"><i></i><img src="../images/user.png" alt="广告"></div>
+						<div class="a-text">
+							<div class="clearfix">
+								<div class="a-name one-line">牛奶推广</div>
+								<div class="a-code">EJYT3244332542</div>
+							</div>
+							<div>投放时间：2017-04-17 14:00:35</div>
+							<div>截止时间：2017-04-18 12:00:50</div>
+							<div>广告机：共投放23台</div>
+							
+							<div class="a-ctrl a-img a1"></div>
+						</div>
+					</a>
+				</li>
+			</ul>
+			<!-- 限制
+			<div class="a-limit">
+				<div class="i-img mlb"></div>投放中的广告最多只能投放10条
+			</div> -->
+		</div>
+		<div class="ad-list">
+			<div class="a-tip">共找到<span class="blue">351</span>个<span class="blue">已暂停</span>的店铺广告</div>
+			<ul>
+				<li>
+					<a href="广告机主-店铺广告详情.html">
+						<div class="fl v-img"><i></i><img src="../images/user.png" alt="广告"></div>
+						<div class="a-text">
+							<div class="clearfix">
+								<div class="a-name one-line">牛奶推广</div>
+								<div class="a-code">EJYT3244332542</div>
+							</div>
+							<div>投放时间：2017-04-17 14:00:35</div>
+							<div>截止时间：2017-04-18 12:00:50</div>
+							<div>广告机：共投放23台</div>
+							<div class="a-ctrl a-img a3"></div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="广告机主-店铺广告详情.html">
+						<div class="fl v-img"><i></i><img src="../images/user.png" alt="广告"></div>
+						<div class="a-text">
+							<div class="clearfix">
+								<div class="a-name one-line">牛奶推广</div>
+								<div class="a-code">EJYT3244332542</div>
+							</div>
+							<div>投放时间：2017-04-17 14:00:35</div>
+							<div>截止时间：2017-04-18 12:00:50</div>
+							<div>广告机：共投放23台</div>
+							
+							<div class="a-ctrl a-img a3"></div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="ad-list">
+			<div class="a-tip">共找到<span class="blue">351</span>个<span class="blue">待投放</span>的店铺广告</div>
+			<ul>
+				<li>
+					<a href="广告机主-店铺广告详情.html">
+						<div class="fl v-img"><i></i><img src="../images/user.png" alt="广告"></div>
+						<div class="a-text">
+							<div class="clearfix">
+								<div class="a-name one-line">牛奶推广</div>
+								<div class="a-code">EJYT3244332542</div>
+							</div>
+							<div>投放时间：2017-04-17 14:00:35</div>			
+							<div>截止时间：2017-04-18 12:00:50</div>
+							<div>广告机：共投放23台</div>
+							
+							<div class="a-ctrl a-img a3"></div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="广告机主-店铺广告详情.html">
+						<div class="fl v-img"><i></i><img src="../images/user.png" alt="广告"></div>
+						<div class="a-text">
+							<div class="clearfix">
+								<div class="a-name one-line">牛奶推广</div>
+								<div class="a-code">EJYT3244332542</div>
+							</div>
+							<div>投放时间：2017-04-17 14:00:35</div>			
+							<div>截止时间：2017-04-18 12:00:50</div>
+							<div>广告机：共投放23台</div>
+							
+							<div class="a-ctrl a-img a3"></div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="ad-list">
+			<div class="a-tip">共找到<span class="blue">351</span>个<span class="blue">审核状态</span>的店铺广告</div>
+			<div class="a-select">
+				<a href="javascript:" class="active">审核中</a>
+				<a href="javascript:">审核失败</a>
+			</div>
+			<ul>
+				<li>
+					<a href="广告机主-店铺广告详情.html">
+						<div class="fl v-img"><i></i><img src="../images/user.png" alt="广告"></div>
+						<div class="a-text">
+							<div class="clearfix">
+								<div class="a-name one-line">牛奶推广</div>
+								<div class="a-code">EJYT3244332542</div>
+							</div>
+							<div>投放时间：2017-04-17 14:00:35</div>			
+							<div>截止时间：2017-04-18 12:00:50</div>
+							<div>广告机：共投放23台</div>
+							
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="广告机主-店铺广告详情.html">
+						<div class="fl v-img"><i></i><img src="../images/user.png" alt="广告"></div>
+						<div class="a-text">
+							<div class="clearfix">
+								<div class="a-name one-line">牛奶推广</div>
+								<div class="a-code">EJYT3244332542</div>
+							</div>
+							<div>投放时间：2017-04-17 14:00:35</div>			
+							<div>截止时间：2017-04-18 12:00:50</div>
+							<div>广告机：共投放23台</div>
+							
+						</div>
+					</a>
+				</li>
+			</ul>
+			<ul style="display: none;">
+				<li>
+					<a href="广告机主-店铺广告详情.html">
+						<div class="fl v-img"><i></i><img src="../images/user.png" alt="广告"></div>
+						<div class="a-text">
+							<div class="clearfix">
+								<div class="a-name one-line">牛奶推广</div>
+								<div class="a-code">EJYT3244332542</div>
+							</div>
+							<div>投放时间：2017-04-17 14:00:35</div>			
+							<div>截止时间：2017-04-18 12:00:50</div>
+							<div>广告机：共投放23台</div>
+							
+							<a class="a-ctrl a-img a4" href="广告机主-发布店铺广告.html"></a>
+						</div>
+					</a>
+					<div class="a-why">
+						原因：图片尺寸与广告机不符合，请重新修改大小。
+					</div>
+				</li>
+				<li>
+					<a href="广告机主-店铺广告详情.html">
+						<div class="fl v-img"><i></i><img src="../images/user.png" alt="广告"></div>
+						<div class="a-text">
+							<div class="clearfix">
+								<div class="a-name one-line">牛奶推广</div>
+								<div class="a-code">EJYT3244332542</div>
+							</div>
+							<div>投放时间：2017-04-17 14:00:35</div>			
+							<div>截止时间：2017-04-18 12:00:50</div>
+							<div>广告机：共投放23台</div>
+							
+							<a class="a-ctrl a-img a4" href="广告机主-发布店铺广告.html"></a>
+						</div>
+					</a>
+					<div class="a-why">
+						原因：图片尺寸与广告机不符合，请重新修改大小。
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="ad-list">
+			<div class="a-tip">共找到<span class="blue">351</span>个<span class="blue">已结束</span>的店铺广告</div>
+			<ul>
+				<li>
+					<a href="广告机主-店铺广告详情.html">
+						<div class="fl v-img"><i></i><img src="../images/user.png" alt="广告"></div>
+						<div class="a-text">
+							<div class="clearfix">
+								<div class="a-name one-line">牛奶推广</div>
+								<div class="a-code">EJYT3244332542</div>
+							</div>
+							<div>投放时间：2017-04-17 14:00:35</div>
+							<div>截止时间：2017-04-18 12:00:50</div>
+							<div>广告机：共投放23台</div>
+							
+							<div class="a-ctrl a-img a5"></div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="广告机主-店铺广告详情.html">
+						<div class="fl v-img"><i></i><img src="../images/user.png" alt="广告"></div>
+						<div class="a-text">
+							<div class="clearfix">
+								<div class="a-name one-line">牛奶推广</div>
+								<div class="a-code">EJYT3244332542</div>
+							</div>
+							<div>投放时间：2017-04-17 14:00:35</div>
+							<div>截止时间：2017-04-18 12:00:50</div>
+							<div>广告机：共投放23台</div>
+							<div class="a-ctrl a-img a5"></div>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 加载 -->
+	<div class="loadding"><img src="../images/loadding.gif"></div>
+	<div class="no-more">已经没有更多了</div>
+	 <!-- 返回顶部 -->
+     <div id="to-top">
+		<img src="../images/to_top.png">
+     </div>
+	<!-- 客服悬浮层 -->
+	<a href="" id="kf" class="new"><!-- 有新消息时加上new 类名 -->
+		<span><img src="../images/kf.png"></span>
+	</a>
+<!-- /**********弹出层 start************/ -->
+<div id="mask"></div>
+<!-- 暂停弹出层 start -->
+  <div class="check-alert c-shop">
+    <div class="center">暂停后广告将停止播放并移至<br>
+“<span class="blue">暂停中</span>”，是否确认暂停？</div>
+    <div class="a-btn">
+      <a href="javascript:">取消</a>
+      <a href="javascript:">立即暂停</a>
+    </div>
+  </div>
+<!-- 暂停弹出层 end -->
+<!-- 暂停成功提示 start-->
+	<div class="succeed-tip s1"><img src="../images/succeed_02.png">暂停成功</div>
+<!-- 暂停成功提示 end-->
+<!-- 开启弹出层 start -->
+  <div class="check-alert c-2">
+    <div class="center">开启后广告将开始投放并移至<br>
+“<span class="blue">投放中</span>”，是否确认开启？</div>
+    <div class="a-btn">
+      <a href="javascript:">取消</a>
+      <a href="javascript:">立即播放</a>
+    </div>
+  </div>
+<!-- 开启弹出层 end -->
+<!-- 开启成功提示 start-->
+	<div class="succeed-tip s2"><img src="../images/succeed_02.png">开启成功</div>
+<!-- 开启成功提示 end-->
+
+<!-- 结束弹出层 start -->
+  <div class="check-alert c-3">
+    <div class="center">结束后广告将停止投放并移至<br>
+“<span class="blue">已结束</span>”，是否确认结束？</div>
+    <div class="a-btn">
+      <a href="javascript:">取消</a>
+      <a href="javascript:" class="red">立即结束</a>
+    </div>
+  </div>
+<!-- 结束弹出层 end -->
+<!-- 结束成功提示 start-->
+	<div class="succeed-tip s3"><img src="../images/succeed_02.png">结束成功</div>
+<!-- 结束成功提示 end-->
+
+<!-- 再次发布弹出层 start -->
+  <div class="check-alert c-4">
+    <div class="center">是否再次发布此广告？</div>
+    <div class="a-btn">
+      <a href="javascript:">取消</a>
+      <a href="javascript:">立即发布</a>
+    </div>
+  </div>
+<!-- 再次发布弹出层 end -->
+<!-- 再次发布成功提示 start-->
+	<div class="succeed-tip s4"><img src="../images/succeed_02.png">发布成功</div>
+<!-- 再次发布成功提示 end-->
+
+<!-- /**********弹出层 end************/ -->
+	<div class="h40"></div>
+	<div class="h110"></div>
+	<!-- 底部提交按钮 蓝色底blue类名-->
+	<div class="floor-layer blue">
+		<a href="广告机主-发布店铺广告.html" class="block">
+			<div class="i-img mlb"></div>发布广告
+		</a>
+	</div>
+</body>
+<script>
+	require(['jquery','toAop'],function(){
+		$("#mask").click(function(){
+	        $(".check-alert,#mask").hide()
+   		 })
+		// 搜索
+		$(".h-sea .h-btn").click(function(){
+	        $(".h-sea").hide()
+	        $(".h-input").show()
+   		 })
+		// 切换
+		$('.switch-ad a').bind('click',function(){
+			var $index = $(this).index();
+			$(this).addClass('active').siblings().removeClass('active');
+			$('.ad-content>.ad-list').eq($index).show().siblings().hide();
+		})
+		// 审核切换
+		$('.a-select a').bind('click',function(){
+			var that = $(this),$index = that.index();
+			that.addClass('active').siblings().removeClass('active');
+			that.parent().parent().children('ul').eq($index).show().siblings('ul').hide();
+		})
+		// 暂停
+		$('.a-ctrl.a1').click(function(){
+	       	$('#mask,.c-shop').show();
+	       	return false; 
+   		 })
+		// 开启
+		$('.a-ctrl.a2').click(function(){
+	       	$('#mask,.c-2').show();
+	       	return false; 
+   		 })
+		// 结束
+		$('.a-ctrl.a3').click(function(){
+	       	$('#mask,.c-3').show();
+	       	return false; 
+   		 })
+		// 发布
+		$('.a-ctrl.a5').click(function(){
+	       	$('#mask,.c-4').show();
+	       	return false; 
+   		 })
+	})
+</script>
+</html>

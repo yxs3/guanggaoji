@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>我的订单</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" href="../css/reset.css">
+<link href="../css/subpage.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+<script src="../js/require.min.js"></script>
+<script src="../js/config.js"></script>
+</head>
+
+<body>
+<!--头部start-->
+ <div class="head-tit">
+		<a href="javascript:history.go(-1);" class="return"></a>
+		查看物流
+	</div>
+<!--头部end-->
+<!--内容start-->
+ <div class="content">
+   <!-- 顶部-->
+    <!-- <div class="nav_tab">
+         <div class="wh_ht">
+            <a class="active m-r">包裹1</a>
+            <a class="m-r">包裹2</a>
+            <a class="m-r">包裹3</a>
+         </div>
+     </div>-->
+      <!-- 顶部-->
+      <!--包裹1一-->
+     <div class="tab_a">
+         <div class="travel-position">
+              <span class="fs">物流状态  <i class="green">运输中</i></span>
+              <span>快递公司：<i>顺丰快递</i></span>
+              <span>运单编号：<i>71010742567864</i></span>
+         </div>
+         <div class="traffic-details">
+           <div class="wrap">
+               <div class="left">
+                   <div class="tp">
+                   <hr/>
+                   </div>
+                   <span class="tp1 active"></span>
+                  <hr/>
+               </div>
+               <div class="right">
+                  <div class="border pg active">[深圳市]快件已从南山区转运中心发出，准备发往广州市<span>2017-06-26 08:24:21</span></div>
+               </div>
+           </div>
+           <div class="wrap">
+               <div class="left">
+                   <div class="tp">
+                      <hr/>
+                   </div>
+                   <span class="tp1"></span>
+                  <hr/>
+               </div>
+               <div class="right">
+                  <div class="border pg ">[深圳市]快件已从南山区转运中心发出，准备发往广州市<span>2017-06-26 08:24:21</span></div>
+               </div>
+           </div>
+           <div class="wrap">
+               <div class="left">
+                   <div class="tp">
+                      <hr/>
+                   </div>
+                   <span class="tp1"></span>
+                  <hr/>
+               </div>
+               <div class="right">
+                  <div class="border pg ">[深圳市]快件已从南山区转运中心发出，准备发往广州市<span>2017-06-26 08:24:21</span></div>
+               </div>
+           </div>
+           <div class="wrap">
+               <div class="left">
+                   <div class="tp">
+                      <hr/>
+                   </div>
+                   <span class="tp1"></span>
+                  <hr/>
+               </div>
+               <div class="right">
+                  <div class="border pg ">[深圳市]快件已从南山区转运中心发出，准备发往广州市<span>2017-06-26 08:24:21</span></div>
+               </div>
+           </div>
+           <div class="wrap">
+               <div class="left">
+                   <div class="tp">
+                      <hr/>
+                   </div>
+                   <span class="tp1"></span>
+                  <hr/>
+               </div>
+               <div class="right">
+                  <div class="border pg ">[深圳市]快件已从南山区转运中心发出，准备发往广州市<span>2017-06-26 08:24:21</span></div>
+               </div>
+           </div>
+           <div class="wrap">
+               <div class="left">
+                   <div class="tp">
+                      <hr/>
+                   </div>
+                   <span class="tp1"></span>
+                  <hr/>
+               </div>
+               <div class="right">
+                  <div class="border pg ">[深圳市]快件已从南山区转运中心发出，准备发往广州市<span>2017-06-26 08:24:21</span></div>
+               </div>
+           </div>
+         </div>
+     </div>
+     <!--包裹2一-->
+     <div class="tab_a">
+         
+         
+     </div>	
+     <!--包裹2end-->
+     <!--包裹3-->
+     <div class="tab_a">
+         
+         
+     </div>
+     <!--包裹3 end-->
+ </div>
+<!--内容end-->
+<!-- 底部start-->
+<!-- 底部end-->
+</body>
+<script>
+require(['jquery'],function(){
+$(".tab_a").eq(0).show().siblings(".tab_a").hide()
+ $(".nav_tab .wh_ht a").click(function(){
+	 $(this).addClass("active").siblings().removeClass("active")
+	 var b=$(this).index()
+	 $(".tab_a").eq(b).show().siblings(".tab_a").hide()
+	 })
+	 })
+</script>
+</html>

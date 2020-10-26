@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>个人中心</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" href="../css/reset.css">
+<link href="../css/subpage.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+<script src="../js/require.min.js"></script>
+<script src="../js/config.js"></script>
+</head>
+
+<body>
+<!--头部start-->
+ <div class="head-tit">
+		<a href="javascript:history.go(-1);" class="return"></a>
+		个人中心
+	</div>
+<!--头部end-->
+<!--内容start-->
+ <div class="personal">
+     <div class="pg_l">
+         <div class="right pg_t_b">
+             <span class="left">头像</span>
+             <img src="../images/personal_a.png" class="rh">
+         </div>
+     </div>
+     <div class="pg_l">
+         <div class="right pg">
+             <span class="lt">昵称</span>
+             <span class="rt">桃源居万香快餐店</span>
+             
+         </div>
+     </div>
+    <!-- <div class="pg_l">
+         <a class="right pg block">
+             <span class="lt">手机号码</span>
+             <span class="rt pg_r">152****2008</span>
+         </a>
+     </div>-->
+     <div class="pg_l">
+         <div class="right pg">
+             <span class="lt">性别</span>
+             <div class="option">
+                   <label class="m_r"><span class="active"></span>女</label>
+                   <label><span></span>男</label>
+             </div>
+         </div>
+     </div>
+ <div class="height790"></div>
+ </div>
+<!--内容end-->
+<!-- 底部start-->
+<!-- 底部end-->
+</body>
+<script>
+require(['jquery'],function(){
+	$(".option label").click(function(){
+		$(this).find("span").addClass("active").parents("label").siblings().find("span").removeClass("active")
+		})
+	  })
+</script>
+</html>

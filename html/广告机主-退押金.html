@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>意见反馈</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" href="../css/reset.css">
+<link href="../css/subpage.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+<script src="../js/require.min.js"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+<!--头部start-->
+ <div class="head-tit">
+		<a href="javascript:history.go(-1);" class="return"></a>
+		申请退货
+	</div>
+<!--头部end-->
+<!--内容start-->
+<div class="refund-page">
+    <div class="page-width">
+              <!--<div class="border">
+                 <span><i>*</i>申请原因</span>
+                 <select class="">
+                     <option>请选择</option>
+                     <option value="换货">换货</option>
+                     <option value="退货">退货</option>
+                 </select>
+             </div>-->
+              <div class="border">
+                 <span><i>*</i>原因</span>
+                 <select class="m-l">
+                     <option>请选择</option>
+                     <option value="买错，更换部分广告机">买错，更换部分广告机</option>
+                     <option value="买错，想重新下单">买错，想重新下单</option>
+                 </select>
+             </div>
+   </div>
+    <div class="page-width">
+      <div class="border">
+          <div class="left">退押金说明</div>
+          <div class="right">还可以输入50字</div>
+          <textarea class="" style="color:#999999">输入退押金说明...</textarea>
+                <div class="wrapper">
+                       <div class="img bd">
+                             <img src="../images/wait.gif" class="cache">
+                             <img src="../images/returns_img.png" class="hidden">
+                             <span class="delete"></span>
+                       </div>
+                       <div class="img bd">
+                             <img src="../images/wait.gif" class="cache" style="display:none;">
+                             <img src="../images/returns_img.png" class="">
+                             <span class="delete"></span>
+                       </div>
+                      <div class="upload-proof file-upload">
+                            <img src="../images/append_img.png">
+                            <a>上传凭证</a>
+                     </div>
+                     <input type="file" class="hidden file">
+                </div> 
+       </div>
+    <div class="page-width">
+              <div class="border">
+                 <span><i>*</i>需退货</span>
+                 <a type="text" class="img " href="广告机主-需退货.html">共5台，押金总计￥5000</a>
+                 <a type="text" class="img hidden">共5台，可退押金￥5000</a>
+             </div>
+   </div>
+    </div>
+    <a class="bottom">提交申请</a><!--蓝色加bule-->
+</div>
+<!--内容end-->
+</body>
+<script>
+require(['jquery'],function(){
+      $(".page-width textarea").focus(function(){
+		  if($(this).val()=="输入退押金说明..."){
+			  $(this).val("")
+			   $(this).css("color","#333")
+			  }
+			  })
+			  $(".page-width textarea").blur(function(){
+		  if($(this).val()==""){
+			      $(this).val("输入退押金说明...")
+				  $(this).css("color","#999")
+			  }
+		  })
+	$(".file-upload").click(function(){
+		$(".file").click()
+		})
+})
+</script>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>E键广告</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/main.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js" type="text/javascript"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+<section class="content_four">
+  
+  <section class="time">
+    <section>支付剩余时间</section>
+    <div class="time-out">
+        <span>0</span>
+        <span>3</span>
+        天
+        <span>0</span>
+        <span>0</span>
+        时
+        <span>0</span>
+        <span>0</span>
+        分
+    </div>
+  </section>
+  <div class="ye-pay clearfix">
+        <div class="fl">余额支付</div>
+        <!-- 不可用时不可点击 -->
+        <div class="fr" style="display: none;">可用余额￥50.50，不足以支付订单<span class="border"></span> </div>
+        <!-- 可用 -->
+         <div class="fr orange">可用余额￥50.50<span class="active"></span> </div>
+  </div>
+  <section>
+      <a>
+           <img src="../images/weixin.png" alt="微信">
+           <section>
+               <span>微信支付</span>
+               <span>推荐安装微信5.0及以上版本的用户使用</span>
+           
+           </section>
+          
+           <span class="border"></span>    
+      </a>
+      <a>
+           <img src="../images/zhifubao.png" alt="支付宝">
+           <section>
+               <span>微信支付</span>
+               <span>推荐安装支付宝5.0及以上版本的用户使用</span>
+           
+           </section>
+          
+           <span class="active"></span>
+      </a>
+  
+  </section>
+     
+</section>
+<div class="big-btn">
+    <a href="广告机主-共享广告支付失败.html">
+        确认支付<span>￥26</span>
+    </a>
+</div>
+<script>
+    require(['jquery'],function(){
+     $(".content_four > section:nth-of-type(2)>a").click(function(){
+         $(this).find("span").addClass("active").removeClass("border").parents(".content_four > section:nth-of-type(2)>a").siblings().find(">span").addClass("border").removeClass("active")
+      
+      })
+    })
+
+</script>
+
+</html>

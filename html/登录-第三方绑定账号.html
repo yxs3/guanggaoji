@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>绑定账号</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/subpage.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+<header class="entry_img">
+   <img src="../images/entry__a.jpg" class="register">
+</header>
+<div class="content fixed">
+   <div class="content_tab bd_no">
+       <div class="head_portrait">
+          <img src="../images/head_portrait.png">
+       </div>
+       <span class="width">完善账号信息，下次可通过手机、QQ账号或微信账号直接登录。</span>
+   </div>
+    <div class="content_tab m-top bd_none">
+        
+       <div class="handset_name bd_br ">
+              <img src="../images/cellphone_ico.png" class="cellphone_ico">
+              <input type="text" placeholder="输入手机号" class="wh">
+              <div class="prompt">手机不能为空</div>
+       </div>
+       <div class="handset_name m_top20 bd_br">
+              <img src="../images/key_ico.png" class="key_ico">
+              <input type="password" placeholder="输入密码" class="wh">
+              <div class="prompt">密码不能为空</div>
+       </div>	
+    </div>		
+</div>
+ <div class="foot">
+      <div class="width670">
+         <a class=""><上一步</a>
+         <a class="fs_cr" href="登录-第三方绑定成功.html">提交</a>
+      </div>
+   </div>
+</body>
+<script>
+require(['jquery'],function(){
+var n=$(window).height()
+var m=$("body").height()
+m=n
+$("body").addClass("bd_bule")
+$("input").change(function(){
+	$(".foot a").eq(1).addClass("fs").removeClass("fs_cr")
+	})
+	})
+</script>
+</html>

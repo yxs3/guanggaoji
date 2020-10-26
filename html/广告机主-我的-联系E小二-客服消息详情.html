@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>E键广告</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/customerServer.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js" type="text/javascript"></script>
+<script src="../js/config.js"></script>
+</head>
+<body class="fbg">
+	<!-- 头部 -->
+	<div class="head-tit">
+		<a href="./广告机主-我的-联系E小二-客服消息列表.html" class="return"></a>
+		客服消息详情
+		<a href="javascri:;" class="fff-a phone">电话客服</a>
+	</div>
+	<div id="app">
+		<div class="kf-msg-l">
+			<div class="k-apply">
+				<div class="fl"><span></span>风清扬</div>
+				<div class="fr">2017-04-13 12:00</div>
+				<div class="clearfix"></div>
+				<p class="k-p">
+					我想知道怎么样才能成为E键云通的商户，要怎么注册？
+					成为商户后有哪些实用的功能，是否能够解决我的店铺目
+					前的结算难的问题？
+				</p>
+			</div>
+			<div class="k-textarea">
+				<div class="k-t-box">
+					<div class="k-object k-kf">
+						<div class="k-u">
+							<img src="../images/user.png" alt="头像">
+							E小二
+						</div>
+						<div class="k-content">
+							你好，请使用手机访问
+							<a href="http://www.ejianyuntong.com/site/ruzhu">http://www.ejianyuntong.com/site/ruzhu</a>
+							页面中详细介绍了如何注册成为商户，关于
+							商户会员有何功能，您可以跟我们的在线客
+							服进行了解或是拨打我们的客服电话
+							<a href="tel:0755-88238888">0755-88238888</a>了解，感谢您的支持！
+						</div>
+					</div>
+					<div class="k-object k-user">
+						<div class="k-u">
+							<img src="../images/user.png" alt="头像">
+						</div>
+						<div class="k-content">
+							注册后要怎么开通商城和使用E键刷？
+						</div>
+					</div>
+					<div class="k-object k-kf">
+						<div class="k-u">
+							<img src="../images/user.png" alt="头像">
+							E小二
+						</div>
+						<div class="k-content">
+							拨打我们的客服<a href="tel:0755-88238888">0755-88238888</a>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div class="reply-send">
+				<input placeholder="想说点什么" type="text">	
+				<a href="javascript:" class="r-btn">发送</a>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	require(['jquery','vue'],function($,Vue){
+		new Vue({
+		    el:"#app",
+		    data:{
+		        
+		    },
+		    mounted:function(){
+				var _this = this;
+				$('.k-textarea').css('padding-top',$('.k-apply').outerHeight()+$('.head-tit').outerHeight()+'px');
+			},
+			methods:{ 
+				
+			}
+		});
+
+	})
+</script>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title> 结算记录（日）</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" href="../css/reset.css">
+<link href="../css/subpage.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+<script src="../js/require.min.js"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+<!--头部start-->
+<div class="head-tit sn-me">
+		<a href="javascript:history.go(-1);" class="return"></a>
+         位置
+        </div>
+	</div>
+<!--头部end-->
+<!--内容start-->
+  <div class="map-a">
+     <div id="map"></div>
+  </div>
+<!--内容end-->
+</body>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=yx8CKXGT9WI5GLgxmjhYgTuO"></script>
+<script>
+function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+    }
+    //创建地图函数：
+   function createMap(){
+			map = new BMap.Map("map");
+            var point = new BMap.Point(113.867176, 22.62024);
+			var mdar = new BMap.Icon('images/map.png', new BMap.Size(30, 30), {});
+            var marker = new BMap.Marker(point, {icon: mdar});
+			map.centerAndZoom(point, 19);
+            map.addOverlay(marker);
+        }
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    initMap();//创建和初始化地图
+</script>
+</html>

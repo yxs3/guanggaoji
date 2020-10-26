@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>第三方登录</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/subpage.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+<header class="entry_img">
+   <img src="../images/entry__a.jpg" class="register">
+</header>
+<div class="content fixed">
+   <div class="content_tab bd_no">
+       <div class="head_portrait">
+          <img src="../images/head_portrait.png">
+       </div>
+       <span class="width">完善账号信息，下次可通过手机、QQ账号或微信账号直接登录。</span>
+   </div>
+   <div class="middle_content">
+       <a class="top" href="注册-绑定手机.html">
+          <img src="../images/ico_c.png">
+          <span>创建新账号</span>
+       </a>
+       <a class="top blue" href="登录-第三方绑定账号.html">
+          <img src="../images/ico_d.png">
+          <span>绑定已有账号</span>
+       </a>   
+   </div>
+</div>
+<footer class="br_top">
+      <a class="manage_heart" href="注册-绑定手机.html">返回注册</a>
+</footer>
+
+  <!--验证码弹出层-->
+    <div class="validate_Popup hidden">
+      <div class="br_bottom">
+               <div class="br">
+                   <input type="text" placeholder="输入验证码">
+                   <span class="validate"></span>
+               </div>
+      </div>
+      <a class="cancel">取消</a>
+      <a class="blue">确认</a>
+    </div>
+    <div class="Popup_bd hidden"></div>
+     <!--验证码弹出层/-->
+</body>
+<script>
+require(['jquery'],function(){
+var n=$(window).height()
+var m=$("body").height()
+m=n
+$("body").addClass("bd_bule")
+$(".handset_name .green").click(function(){
+		$(".validate_Popup").show()
+		$(".Popup_bd").show()
+		})
+$(".validate_Popup .cancel").click(function(){
+		$(".validate_Popup").hide()
+		$(".Popup_bd").hide()
+		})
+		})
+</script>
+</html>

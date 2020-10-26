@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>E键广告</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/swiper.min.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js" type="text/javascript"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="head-tit">
+		<a href="javascript:history.go(-1);" class="return"></a>
+		我的银行卡
+	</div>
+	<div class="my-bank">
+		<ul>
+			<li>
+				<div class="swiper-container">
+					<div class="m-content clearfix swiper-wrapper">
+						<div class="swiper-slide repadding">
+							<div class="fl">
+								<div class="bank-ico b_zgjs_06"></div>
+								<div class="m-name">建设银行</div>
+								<div>储蓄卡</div>
+							</div>
+							<div class="fr f-pay">快捷<span>支付</span></div>
+							<div class="clearfix"></div>
+							<div class="m-num">**** **** **** 6636</div>
+							<div class="m-tip">
+								<div class="fr"><a href="javascript:" class="fr">设为默认</a></div>
+							</div>
+						</div>
+						<div class="m-ctrl swiper-slide">
+							<a href="javascript:" class="js-del">
+								<div class="i-img js-ctrl"></div>
+								删除
+							</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="swiper-container">
+					<div class="m-content clearfix swiper-wrapper">
+						<div class="swiper-slide repadding">
+							<div class="fl">
+								<div class="bank-ico b_zgjs_06"></div>
+								<div class="m-name">建设银行</div>
+								<div>储蓄卡</div>
+							</div>
+							<div class="fr f-pay">快捷<span>支付</span></div>
+							<div class="clearfix"></div>
+							<div class="m-num">**** **** **** 6636</div>
+							<div class="m-tip">
+								<a href="javascript:" class="fr"><div class="i-img mlb"></div><span>默认地址</span></a>
+							</div>
+						</div>
+						<div class="m-ctrl swiper-slide">
+							<a href="javascript:" class="js-del js-ctrl">
+								<div class="i-img js-ctrl"></div>
+								删除
+							</a>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="m-zy"><div class="i-img mlb"></div>注意：E键广告目前只支持建设银行卡</div>
+	<div id="mask"></div>
+	<!-- 删除弹出层 start -->
+	<div class="check-alert">
+		<div class="center">是否删除该收货地址？</div>
+		<div class="a-btn">
+			<a href="javascript:">取消</a>
+			<a href="javascript:">确定删除</a>
+		</div>
+	</div>
+<!-- 删除弹出层 end -->	
+<!-- 底部提交按钮 蓝色底blue类名-->
+	<div class="floor-layer blue">
+		<a href="广告机主-添加银行卡.html" class="block">
+			<div class="i-img mlb"></div>添加银行卡
+		</a>
+	</div>
+</body>
+<script>
+	require(['jquery','swiper'],function(){
+		$(window).on('resize',function(){
+			setTimeout(function(){
+				$.each(mySwiper,function(){
+					this.onResize()
+				});
+			},50);
+		})
+		var mySwiper = new Swiper('.swiper-container',{
+			slidesPerView: 'auto',
+			resistanceRatio:0
+		});
+		//删除
+		$('.js-del').bind('click',function(){
+			$('#mask,.check-alert').show();
+		})
+	})
+</script>
+</html>

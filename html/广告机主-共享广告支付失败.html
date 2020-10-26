@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>E键广告</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/main.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js" type="text/javascript"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+<!--内容区域-->
+<section class="content_five">
+    <section>
+       <span>支付失败时间：2017-03-08 12:00</span>
+    </section>
+    
+    <section>
+       
+    </section>
+    
+    <section>
+       <img src="../images/ico_payment.png" class="ico_payment">
+       <span class="red">支付失败</span>
+    
+    </section>
+    
+    <section>
+      <a href="广告机主-广告管理.html">查看未支付</a>
+      <a href="javascript:history.go(-1)" class="background2">重新支付</a>
+    </section>
+  
+  
+  
+     
+  
+     
+     
+    
+     
+     
+     
+     
+     
+    
+     
+     
+
+</section>
+<!--内容区域-->
+<!--底部-->
+<!--<footer></footer>-->
+<!--底部-->
+</body>
+<script src="../js/style.js"></script>
+<script src="../js/jquery-1.11.3.min.js"></script>
+<!--/*时间*/-->
+<script>
+    $.extend($.fn,{
+        fnTimeCountDown:function(d){
+            this.each(function(){
+                var $this = $(this);
+                var o = {
+                    hm: $this.find(".hm"),
+                    sec: $this.find(".sec"),
+                    mini: $this.find(".mini"),
+                    hour: $this.find(".hour"),
+                    day: $this.find(".day"),
+                    month:$this.find(".month"),
+                    year: $this.find(".year")
+                };
+                var f = {
+                    haomiao: function(n){
+                        if(n < 10)return "00" + n.toString();
+                        if(n < 100)return "0" + n.toString();
+                        return n.toString();
+                    },
+                    zero: function(n){
+                        var _n = parseInt(n, 10);//解析字符串,返回整数
+                        if(_n > 0){
+                            if(_n <= 9){
+                                _n = "0" + _n
+                            }
+                            return String(_n);
+                        }else{
+                            return "00";
+                        }
+                    },
+                    dv: function(){
+                        //d = d || Date.UTC(2050, 0, 1); //如果未定义时间，则我们设定倒计时日期是2050年1月1日
+                        var _d = $this.data("end") || d;
+                        var now = new Date(),
+                            endDate = new Date(_d);
+                        //现在将来秒差值
+                        //alert(future.getTimezoneOffset());
+                        var dur = (endDate - now.getTime()) / 1000 , mss = endDate - now.getTime() ,pms = {
+                            hm:"000",
+                            sec: "00",
+                            mini: "00",
+                            hour: "00",
+                            day: "00",
+                            month: "00",
+                            year: "0"
+                        };
+                        if(mss > 0){
+                            pms.hm = f.haomiao(mss % 1000);
+                            pms.sec = f.zero(dur % 60);
+                            pms.mini = Math.floor((dur / 60)) > 0? f.zero(Math.floor((dur / 60)) % 60) : "00";
+                            pms.hour = Math.floor((dur / 3600)) > 0? f.zero(Math.floor((dur / 3600)) % 24) : "00";
+                            pms.day = Math.floor((dur / 86400)) > 0? f.zero(Math.floor((dur / 86400)) % 30) : "00";
+                            //月份，以实际平均每月秒数计算
+                            pms.month = Math.floor((dur / 2629744)) > 0? f.zero(Math.floor((dur / 2629744)) % 12) : "00";
+                            //年份，按按回归年365天5时48分46秒算
+                            pms.year = Math.floor((dur / 31556926)) > 0? Math.floor((dur / 31556926)) : "0";
+                        }else{
+                            pms.year=pms.month=pms.day=pms.hour=pms.mini=pms.sec="00";
+                            pms.hm = "000";
+                            //alert('结束了');
+                            return;
+                        }
+                        return pms;
+                    },
+                    ui: function(){
+                        if(o.hm){
+                            o.hm.html(f.dv().hm);
+                        }
+                        if(o.sec){
+                            o.sec.html(f.dv().sec);
+                        }
+                        if(o.mini){
+                            o.mini.html(f.dv().mini);
+                        }
+                        if(o.hour){
+                            o.hour.html(f.dv().hour);
+                        }
+                        if(o.day){
+                            o.day.html(f.dv().day);
+                        }
+                        if(o.month){
+                            o.month.html(f.dv().month);
+                        }
+                        if(o.year){
+                            o.year.html(f.dv().year);
+                        }
+                        setTimeout(f.ui, 1);
+                    }
+                };
+                f.ui();
+            });
+        }
+    });
+
+</script>
+
+<script type="text/javascript">
+    $("#fnTimeCountDown").fnTimeCountDown("2017/04/9 12:14:13");
+
+</script>
+
+</html>

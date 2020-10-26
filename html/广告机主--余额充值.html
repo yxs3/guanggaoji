@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>余额充值</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" href="../css/reset.css">
+<link href="../css/subpage.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+<script src="../js/require.min.js"></script>
+<script src="../js/config.js"></script>
+</head>
+
+<body>
+<!--头部start-->
+<div class="head-tit">
+		<a href="javascript:history.go(-1);" class="return"></a>
+	余额充值
+	</div>
+<!--头部end-->
+<!--内容start-->
+ <div class="balance_recharge">
+     <div class="recharge_sum">
+         <span class="fs28">充值金额</span>
+         <input type="text" placeholder="请输入充值金额">
+     </div>
+     <div class="pay_choice br_b">
+        <img class="left" src="../images/weixin.png">
+        <div class="center">
+           <div class="fs26">微信支付</div>
+           <div class="fs20_cr99">推荐安装微信5.0及以上版本的用户使用</div>
+        </div>
+        <span class="right"></span>
+     </div>
+     <div class="pay_choice">
+        <img class="left" src="../images/zhifubao.png">
+        <div class="center">
+           <div class="fs26">支付宝支付</div>
+           <div class="fs20_cr99">推荐安装微信5.0及以上版本的用户使用</div>
+        </div>
+        <span class="right active"></span>
+     </div>
+     <a class="wh">去充值</a>
+     <div class="height685"></div>
+ </div>
+<!--内容end-->
+<!-- 底部start-->
+<footer id="foot">
+		<ul>
+			<li><a href="我的首页.html"><div class="f-img ico-1"></div>首页</a></li>
+			<li class="new"><a href=""><div class="f-img ico-2"></div>资产</a></li>
+			<li class="new"><a href="广告机主-我的-个人中心.html"><div class="f-img ico-3"></div>我的</a></li>
+		</ul>
+	</footer>
+<!-- 底部end-->
+</body>
+<script>
+require(['jquery'],function(){
+	$(".pay_choice").click(function(){
+		$(this).find("span").addClass("active").parents(".pay_choice").siblings().find("span").removeClass("active")
+		})
+	})
+</script>
+</html>

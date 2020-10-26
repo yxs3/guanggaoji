@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>E键广告</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/swiper.min.css">
+<link rel="stylesheet" href="../css/subpage.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js" type="text/javascript"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+		<div class="head-tit">
+			<a href="javascript:history.go(-1);" class="return"></a>
+			 添加
+             <a class="right wh95 right-b check-all">全选</a>
+             <a class="right wh95 right-b cancel-c hidden">取消</a>
+		</div>
+	<!-- 空广告提示 -->
+	<div class="nothing hollow-ng" style="display:none;">
+		<img src="../images/nothing03.png" style="width:5rem;">
+		未找到可设置的广告机
+	</div>
+	<div class="all-ad-l machine vis">
+        <div class="gray prompt-c">当前未设置二维码的广告机：16台</div>
+		<ul>
+			<li >
+					<div class="swiper-wrapper">
+						<a href="javascript:" class="swiper-slide repadding pg">
+							<div class="fl v-img" style="position:relative"><i></i><img src="../images/ad/ad.png" alt="广告机"></div>
+							<div class="ad-text">
+								<div class="one-line a-name">华宝广告机华宝广告机</div>
+								<div class="a-data" style="overflow: visible;">
+									<div class="wh-auto m-t wh90">
+                                         <div class="one-line">
+                                             <span class="blue middel">横屏</span>
+                                             <span class="cr99">编号：EJGG123456789111</span>
+                                         </div>
+                                         <div class="one-line">
+                                            <span class="cr99 bottom">位置：广东学圳市宝安区西乡河西二坊34河</span>
+                                        </div>
+                                    </div>
+								</div>
+							</div>
+                            <span class="pitch-on hidden">
+                            </span>
+						</a>
+					</div>
+			</li>
+            <li >
+					<div class="swiper-wrapper">
+						<a href="javascript:" class="swiper-slide repadding pg">
+							<div class="fl v-img" style="position:relative"><i></i><img src="../images/ad/ad.png" alt="广告机"></div>
+							<div class="ad-text">
+								<div class="one-line a-name">华宝广告机华宝广告机</div>
+								<div class="a-data" style="overflow: visible;">
+									<div class="wh-auto m-t wh90">
+                                         <div class="one-line">
+                                             <span class="blue middel">横屏</span>
+                                             <span class="cr99">编号：EJGG123456789111</span>
+                                         </div>
+                                         <div class="one-line">
+                                            <span class="cr99 bottom">位置：广东学圳市宝安区西乡河西二坊34河</span>
+                                        </div>
+                                    </div>
+								</div>
+							</div>
+                            <span class="pitch-on hidden">
+                               
+                            </span>
+						</a>
+					</div>
+			</li>
+            <li >
+					<div class="swiper-wrapper">
+						<a href="javascript:" class="swiper-slide repadding pg">
+							<div class="fl v-img" style="position:relative"><i></i><img src="../images/ad/ad.png" alt="广告机"></div>
+							<div class="ad-text">
+								<div class="one-line a-name">华宝广告机华宝广告机</div>
+								<div class="a-data" style="overflow: visible;">
+									<div class="wh-auto m-t wh90">
+                                         <div class="one-line">
+                                             <span class="blue middel">横屏</span>
+                                             <span class="cr99">编号：EJGG123456789111</span>
+                                         </div>
+                                         <div class="one-line">
+                                            <span class="cr99 bottom">位置：广东学圳市宝安区西乡河西二坊34河</span>
+                                        </div>
+                                    </div>
+								</div>
+							</div>
+                            <span class="pitch-on">
+                               
+                            </span>
+						</a>
+					</div>
+			</li>
+		</ul>
+        <!-- 加载 -->
+	<div class="loadding"><img src="../images/loadding.gif"></div>
+	<div class="no-more">已经没有更多了</div>
+        <!-- 加载 -->
+    <div class="height150"></div>
+	</div>
+    <a class="floor-layer" id="jsSubmit">
+      <div class="i-img i-check mlb"></div>确认添加
+  </a>
+    <!--删除弹框-->
+<div class="mask hidden"></div>
+<div class="bomb-box delete-a hidden">
+     <div class="pg20 br-b">
+         <div class="top fs-cr33">是否移除所选广告机？</div>
+         <div class="middel red t-ct">移除后，广告机将显示默认二维码如<br/>要设置请尽快进行设置！</div>
+     </div>
+     <div class="bottom">
+       <a class="br-r">取消</a>
+       <a class="blue br-l">确认</a>	
+     </div>
+</div>
+<!--删除弹框-->
+<script>
+require(['jquery'],function(){
+	$('.swiper-slide').click(function(){
+		$(this).find("span.pitch-on").show().parents("li").siblings('li').find('span.pitch-on').hide();
+		})
+	$('.head-tit .check-all').click(function(){
+		$(this).hide();
+		$('.head-tit .cancel-c').show();
+		$(".swiper-slide .pitch-on").show();
+		})
+	$('.head-tit .cancel-c').click(function(){
+		$(this).hide();
+		$('.head-tit .check-all').show();
+		$(".swiper-slide .pitch-on").hide();
+		})
+})
+</script>
+</body>
+</html>

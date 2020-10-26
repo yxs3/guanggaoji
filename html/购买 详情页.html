@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>E键广告</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/subpage.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js" type="text/javascript"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+<!--内容区域-->
+   <div class="buy-details">
+      <div class="tp-img"><img src="../images/details/details_img.jpg"></div>
+      <div class="pg20 bd-ff ow-hn">
+          <div class="ow-a"><span class="fs30 left">蟹爷熟醉蟹（限季节供应）</span><a class="fn-a mr15 mr-5">线下配送</a><a class="fn-a">门店就餐</a><a class="share"></a></div>
+          <div class="red"><i class="fs32">￥35.00</i>/只</div>
+          <div class="fs26 pt br-b"><span class="lt">快递：免运费</span><span class="rt">上海</span><span class="middel">月销：268笔</span></div>
+      </div>
+      <div class="cr-ht20"></div>
+      <div class="number">
+          <div class="br-b ow-hn pr20">
+               <div class="ft">产地：阳澄湖</div>
+               <div class="rt"><i class="ft">数量：</i><span class="minus">-</span><input type="text" value="0" maxlength='5'onafterpaste="this.value=this.value.replace(/[^\d\s]/g,'')" onkeyup="this.value=this.value.replace(/[^\d\s]/g,'')"><span class="add">+</span></div>
+          </div>
+      </div>
+      <div class="title">-商品详情-</div>
+      <div class="details-img">
+         <img src="../images/details/details_a.jpg">
+         <img src="../images/details/details_b.jpg">
+         <img src="../images/details/details_c.jpg">
+         <img src="../images/details/details_d.jpg">
+      </div>
+      <div class="height97"></div>
+      <!--底部购买按钮-->
+       <div class="btn-a">
+         <a class="bd-yellow">加入购物车</a>
+         <a class="bd-red">立即购买</a>
+      </div>
+     <!--底部购买按钮-->
+   </div> 
+<!--内容区域-->
+<script>
+require(['jquery'],function(){
+	    var i=0;
+	    $('.number .rt span.add').click(function(){
+			var b=$('.number .rt input').val()
+			i=b
+			if(i<0){
+				i=1}
+				i++;
+			 $('.number .rt input').val(i);
+			})
+	     $('.number .rt span.minus').click(function(){
+			  var b=$('.number .rt input').val()
+			  i=b
+				i--;
+				if(i<0){i=0}
+			 $('.number .rt input').val(i);
+			})
+   })
+</script>
+</body>
+</html>

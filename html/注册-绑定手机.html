@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>绑定手机</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/subpage.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+<header class="entry_img">
+   <img src="../images/register.jpg" class="register">
+   <span>用于修改密码，身份识别等账户等操作；</span>
+   <span>绑定专属手机号，提升你的账户安全性；</span>
+</header>
+<div class="content">
+   <!--内容-->
+   <div class="content_tab m_top">
+       <div class="handset_name">
+              <img src="../images/cellphone_ico.png" class="cellphone_ico">
+              <input type="text" placeholder="手机号" class="wh">
+              <div class="prompt">手机不能为空</div>
+       </div>
+       <div class="handset_name br_top">
+           <input type="text" placeholder="验证码" class="width365">
+           <a class="green">获取验证码</a>
+           <a class="crbb hidden">120秒后重新获取</a>
+           <div class="prompt lt_c">验证码不能为空</div>
+       </div>
+     <div class="handset_name br">
+              <img src="../images/key_ico.png" class="key_ico ">
+              <input type="password" placeholder="输入密码" class="width435">
+              <div class="prompt">密码不能为空</div>
+       </div>		
+       <div class="handset_name ">
+             <img src="../images/key_ico.png" class="key_ico ">
+             <input type="password" placeholder="再次输入密码" class="width435">
+             <div class="prompt">密码与第一次不同</div>
+       </div>
+   </div>
+   <!--内容-->
+  <div class="third_party m_t">
+      <div class="top">
+           <hr/>
+           <span>合作伙伴登录</span>
+      </div>
+      <div class="bottom">
+          <a></a>
+          <a></a>
+          <a></a>
+      </div>
+      <!--验证码弹出层-->
+    <div class="validate_Popup hidden">
+      <div class="br_bottom">
+               <div class="br">
+                   <input type="text" placeholder="输入验证码">
+                   <a class="validate"></a>
+               </div>
+      </div>
+      <a class="cancel">取消</a>
+      <a class="blue">确认</a>
+    </div>
+    <div class="Popup_bd hidden"></div>
+     <!--验证码弹出层/-->
+  </div>
+  <div class="height175"></div>
+  <div class="foot">
+      <div class="width670">
+         <a class="">< 上一步</a>
+         <a class="fs_cr" href="登录-第三方绑定成功.html">下一步</a>
+      </div>
+   </div>
+</div>
+</body>
+<script>
+require(['jquery'],function(){
+var n=$(window).height()
+var m=$("body").height()
+m=n
+$("body").addClass("bd_bule")
+$("").click(function(){
+	  $("").show()
+	})
+$(".handset_name .green").click(function(){
+		$(".validate_Popup").show()
+		$(".Popup_bd").show()
+		})
+$(".validate_Popup .cancel").click(function(){
+		$(".validate_Popup").hide()
+		$(".Popup_bd").hide()
+		})
+$("input").change(function(){
+	$(".foot a").eq(1).addClass("fs").removeClass("fs_cr")
+	})
+	})
+</script>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>注册</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/register.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js" type="text/javascript"></script>
+<script src="../js/config.js"></script>
+
+</head>
+<body>
+<header id="head">
+	<img src="../images/bg_04.jpg" width="100%">
+	<div class="h-box">
+		<div class="h-progress active">
+			<div class="h-num">1</div>
+			绑定手机
+		</div>
+		<div class="h-progress active">
+			<div class="h-num">2</div>
+			营业执照
+		</div>
+		<div class="h-progress active">
+			<div class="h-num">3</div>
+			店铺资料
+		</div>
+		<div class="h-progress active">
+			<div class="h-num">4</div>
+			绑定银行卡
+		</div>
+	</div>
+</header>
+<div class="body pb120">
+	<div class="b-form mt-7 b-bank">
+		<div class="b-group">
+			<div class="img i-addr"></div>
+			<div class="b-label">开户地</div>
+			<select>
+				<option value="">请选择</option>
+			</select>
+			<select>
+				<option value="">请选择</option>
+			</select>
+			<select>
+				<option value="">请选择</option>
+			</select>
+			<div class="error-text">地址不能为空</div>
+		</div>
+		<div class="b-group">
+			<div class="img i-bank"></div>
+			<div class="b-label">银行</div>
+			<select>
+				<option value="">选择银行</option>
+			</select>
+			<div class="error-text"></div>
+		</div>
+		<div class="b-group">
+			<div class="img i-bankaddr"></div>
+			<div class="b-label">支行</div>
+			<input type="text" placeholder="输入支行信息">
+			<div class="error-text"></div>
+		</div>
+		<div class="b-group">
+			<div class="img i-user"></div>
+			<div class="b-label">开户人</div>
+			<input type="text" placeholder="输入开户人姓名">
+			<div class="error-text"></div>
+		</div>
+		<div class="b-group">
+			<div class="img i-banknum"></div>
+			<div class="b-label">卡号</div>
+			<input type="tel" placeholder="输入银行卡卡号" id="bankCtrl">
+			<div class="error-text"></div>
+		</div>
+	</div>
+	<div class="p-n-ctrl">
+		<a href="javascript:history.go(-1)" class="fl"><div class="img"></div>上一步</a>
+		<a href="注册-5-注册成功.html" class="fr">下一步</a>
+	</div>
+</div>
+</body>
+<script>
+	
+	require(['jquery'],function($){
+		//银行卡空格分隔*
+		$('#bankCtrl').keyup(function() {
+			var that = $(this),val = that.val(),real = that.val().replace(/\s/g,'');
+			if(real.length%4 == 0){
+				val += ' ';
+			}
+			that.val(val);
+		})
+	})
+	require(['jquery'],function($){
+		$('.body').css('min-height',$(window).height()-$('#head').height());
+
+	})
+</script>
+</html>

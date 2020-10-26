@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>E键广告</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/subpage.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js" type="text/javascript"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="head-tit">
+		E键广告-广告机主
+		<a href="广告机主-我的首页.html" class="h-user"><div class="i-img"></div></a>
+	</div>
+	<div class="orange-tip">业务员</div>
+	<header id="ad-head" class="type">
+		<ul>
+			<li><a href="javascript:">
+				<div class="img02 a1"></div>
+				广告机
+				<div class="a-num">96,358</div>
+			</a></li>
+			<li><a href="javascript:">
+				<div class="img02 a2"></div>
+				会员
+				<div class="a-num">96,358</div>
+			</a></li>
+			<li><a href="javascript:">
+				<div class="img02 a3"></div>
+				代理商
+				<div class="a-num">96,358</div>
+			</a></li>
+			<li><a href="javascript:">
+				<div class="img02 a4"></div>
+				业务员
+				<div class="a-num">358</div>
+			</a></li>
+		</ul>
+	</header>
+	<div class="E-shua">
+		<div class="fl">
+			<div class="i-img mlb"></div><!-- 您已经是我们的E键刷会员！ -->您还不是我们的E键刷会员
+		</div>
+		<a href="" class="fr" style="display: none;">
+			前往E键刷
+			<div class="i-img mlb"></div>
+		</a>
+		<a href="注册-1-确认注册.html" class="e-btn">
+			去开通
+		</a>
+	</div>
+	<div class="all-money">
+		<div class="a-tit">累计总收益</div>
+		<span>8</span><i class="i-img"></i><span>9</span><span>1</span><span>0</span><i class="i-img"></i><span>2</span><span>3</span><span>1</span><i class="i-d">.</i><span>5</span><span>0</span>
+	</div>
+	<div id="nav">
+		<ul>
+        	<li class="new">
+				<a href="广告机主-广告管理.html">
+					<div class="i-img n-gg"></div>广告管理
+				</a>
+        	</li>
+        	<li class="new">
+				<a href="广告机主-分组管理.html">
+					<div class="i-img n-fz"></div>分组管理
+				</a>
+        	</li>
+        	 <li>
+				<a href="广告机主-广告机管理.html">
+					<div class="i-img n-ggj"></div>广告机管理
+				</a>
+        	</li>
+        	<li>
+				<a href="广告机主-素材管理.html">
+					<div class="i-img n-sc"></div>素材管理
+				</a>
+        	</li>
+        	<li>
+				<a href="业务员管理.html">
+					<div class="i-img img02 n-ywy"></div>业务员管理
+				</a>
+        	</li>
+        	<li>
+				<a href="我的代理商.html">
+					<div class="i-img img02 n-agent"></div>我的代理商
+				</a>
+        	</li>
+        	<li>
+				<a href="我的会员.html">
+					<div class="i-img img02 n-user"></div>我的会员
+				</a>
+        	</li>
+        </ul>
+	</div>
+     <!-- 资产统计 -->
+     <div class="index-chart i-cw">
+			<div class="i-tit">
+				<div class="i-t-wrap">
+					<div class="fl">
+						<div class="i-img i-cw mlb"></div>资产统计
+					</div>
+					<a href="资产统计.html" class="fr">查看<div class="i-img ico-right"></div></a>
+				</div>
+			</div>
+			<div class="i-g">
+				<ul>
+					<li>
+						<span class="red circle"></span> 未结算<small>(元)</small>
+						<div class="one-line red">
+							50000.5400
+						</div>
+					</li>
+					<li>
+						<span class="green circle"></span> 已结算<small>(元)</small>
+						<div class="one-line green">
+							50000.5400
+						</div>
+					</li>
+					<li>
+						<span class="blue circle"></span> 日均收益<small>(元)</small>
+						<div class="one-line blue">
+							50000.5400
+						</div>
+					</li>
+					<li>
+						<span class="green2 circle"></span> 今日预计收益<small>(元)</small>
+						<div class="one-line green2">
+							50000.5400
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div id="echart1"></div>
+			<div class="i-date">
+				<!-- 显示8个 -->
+				<ul>
+					<li><span>10月</span></li>
+					<li><span>11月</span></li>
+					<li><span>12月</span></li>
+					<li><span>1月</span></li>
+					<li><span>2月</span></li>
+					<li><span>3月</span></li>
+					<li><span>4月</span></li>
+					<li><span>5月</span></li>
+				</ul>
+			</div>
+     </div>
+	<!-- 播放统计 -->
+     <div class="index-chart">
+			<div class="i-tit">
+				<div class="i-t-wrap">
+					<div class="fl">
+						<div class="i-img mlb img02"></div>代理商统计
+					</div>
+					<a href="" class="fr">查看<div class="i-img ico-right"></div></a>
+				</div>
+			</div>
+			<div class="i-g col-3">
+				<ul>
+					<li>
+						<span class="orange2 circle"></span> 市代理
+						<div class="one-line red2">
+							50,000
+						</div>
+					</li>
+					<li>
+						<span class="orange circle"></span> 区代理
+						<div class="one-line green">
+							50,000
+						</div>
+					</li>
+					<li>
+						<span class="green3 circle"></span> 普通代理
+						<div class="one-line blue">
+							50,000
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div id="echart2"></div>
+			<div class="i-date">
+				<!-- 显示8个 -->
+				<ul>
+					<li><span>5-3</span></li>
+					<li><span>5-4</span></li>
+					<li><span>5-5</span></li>
+					<li><span>5-6</span></li>
+					<li><span>5-7</span></li>
+					<li><span>5-8</span></li>
+					<li><span>5-9</span></li>
+					<li><span>5-10</span></li>
+				</ul>
+			</div>
+     </div>
+	 <!-- 投放统计 -->
+     <div class="index-chart">
+			<div class="i-tit">
+				<div class="i-t-wrap">
+					<div class="fl">
+						<div class="i-img i-tf mlb"></div>会员统计<small>(个)</small>
+					</div>
+					<a href="" class="fr">查看<div class="i-img ico-right"></div></a>
+				</div>
+			</div>
+			<div class="i-g col-3">
+				<ul>
+					<li>
+						<span class="blue circle"></span> 广告机主
+						<div class="one-line red2">
+							50,000
+						</div>
+					</li>
+					<li>
+						<span class="blue2 circle"></span> 普通会员
+						<div class="one-line green">
+							50,000
+						</div>
+					</li>
+					<li>
+						<span class="green circle"></span> 月均增加
+						<div class="one-line blue">
+							50,000
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div id="echart3"></div>
+			<div class="i-date">
+				<!-- 显示8个 -->
+				<ul>
+					<li><span>5-3</span></li>
+					<li><span>5-4</span></li>
+					<li><span>5-5</span></li>
+					<li><span>5-6</span></li>
+					<li><span>5-7</span></li>
+					<li><span>5-8</span></li>
+					<li><span>5-9</span></li>
+					<li><span>5-10</span></li>
+				</ul>
+			</div>
+     </div>
+     <!-- 播放类型统计 -->
+     <div class="index-chart">
+			<div class="i-tit">
+				<div class="i-t-wrap">
+					<div class="fl">
+						<div class="i-img i-bf mlb"></div>投放统计<small>(个)</small>
+					</div>
+					<a href="" class="fr">查看<div class="i-img ico-right"></div></a>
+				</div>
+			</div>
+			<div class="i-g col-3">
+				<ul>
+					<li>
+						<span class="orange2 circle"></span> 共享广告
+						<div class="one-line red2">
+							50,000
+						</div>
+					</li>
+					<li>
+						<span class="orange circle"></span> 店铺广告
+						<div class="one-line green">
+							50,000
+						</div>
+					</li>
+					<li>
+						<span class="green3 circle"></span> 投放金额<small>(元)</small>
+						<div class="one-line blue">
+							50,000
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div id="echart4"></div>
+			<div class="i-date">
+				<!-- 显示8个 -->
+				<ul>
+					<li><span>5-3</span></li>
+					<li><span>5-4</span></li>
+					<li><span>5-5</span></li>
+					<li><span>5-6</span></li>
+					<li><span>5-7</span></li>
+					<li><span>5-8</span></li>
+					<li><span>5-9</span></li>
+					<li><span>5-10</span></li>
+				</ul>
+			</div>
+     </div>
+    <!-- 绑定银行卡弹出层-->
+  <div class="binding-Popup" style="display: none;">
+        <div class="close"><span class="right">x</span></div>
+         <div class="content">
+           <div class="bottom">
+            <div class="fs34 m-b">您还未绑定银行卡！</div>
+            <div class="cr66"><span>您已是广告机机主，请绑定</span><span>真实有效银行卡以便结算/提现</span></div>
+           </div>
+         </div>
+            <a class="btn1 fs38">立即绑定银行卡</a>
+  	</div>
+  <div class="mask" style="display: none;"></div>
+   <!-- 绑定银行卡弹出层-->
+     <!-- 客服悬浮层 -->
+	<a href="" id="kf" class="new"><!-- 有新消息时加上new 类名 -->
+		<span><img src="../images/kf.png"></span>
+	</a>
+	<div class="h60"></div>
+	<div class="h110"></div>
+	<!-- 底部start-->
+<footer id="foot">
+		<ul>
+			<li><a href="../html/index.html"><div class="f-img ico-1"></div>首页</a></li>
+			<li class="new"><a href="../html/广告机主-资产.html"><div class="f-img ico-2"></div>资产</a></li>
+			<li class="new"><a href="../html/广告机主-我的首页.html"><div class="f-img ico-3"></div>我的</a></li>
+		</ul>
+	</footer>
+<!-- 底部end-->
+</body>
+<!-- 客服悬浮层 -->
+	<a href="" id="kf" class="new"><!-- 有新消息时加上new 类名 -->
+		<span><img src="../images/kf.png"></span>
+	</a>
+<!-- echarts 图表 -->
+<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+<script>
+		 require(  
+            [  //模块化加载折线图
+                'echarts',  
+				'echarts/chart/line'
+			],  
+         function (echarts) { 
+			  //资产统计（单位：元）
+			var chart1 = document.getElementById('echart1');    
+			var echart1 = echarts.init(chart1);   
+			//日期数据固定10列
+			 var $data1 = [],$data2 = [],$data3 = [],$data4 = [],date = [];
+			for(var i = 1;i <= 10;i ++){
+				$data1.push(parseInt(Math.random()*100000));
+				$data2.push(parseInt(Math.random()*100000));
+				$data3.push(parseInt(Math.random()*100000));
+				$data4.push(parseInt(Math.random()*100000));
+				date.push(i)
+			}
+			var option1 = {  
+				backgroundColor:'#fff',
+				title: {  
+					text: ''  
+				},  
+				tooltip: {  
+					show:false,
+					trigger: 'item'  
+				},
+				grid: {  
+					x: '-1',  
+					y: '0',  
+					x2: '0',  
+					y2: '0'  
+				},  
+				toolbox: {  
+					feature: {  
+						saveAsImage: {}  
+					}  
+				},  
+				xAxis: { 
+					type: 'category',  
+					boundaryGap: false,
+					axisLine: {show: false},
+					axisTick: {show: false},  
+					data: date,
+					splitLine: {
+						show: true,
+						lineStyle:{
+							 color: '#f9f9f9',
+							 width: 1,
+							type: 'solid'
+						}
+					}  
+				},  
+				yAxis : [
+					{
+						type : 'value',
+						//左侧栏目设置		                
+						 min: 0,
+						 max: 120000,
+						 interval: 10000,
+						 axisLine: {show: false},
+						 splitLine: {
+							show: true,
+							lineStyle:{
+								 color: '#f9f9f9',
+								 width: 1,
+								type: 'solid'
+							}
+						} 
+					}
+				], 
+				series: [  
+					{  
+						name:'未结算',  
+						type:'line',  
+						stack: '未结算',  
+						itemStyle : {  
+							normal : {  
+								color:'#ff5022',  
+								lineStyle:{  
+									color:'#ff5022'  
+								}  
+							}  
+						},  
+						data:$data1
+					},
+					 {  
+						name:'日均收益',  
+						type:'line',  
+						stack: '日均收益',  
+						itemStyle : {  
+							normal : {  
+								color:'#328eff',  
+								lineStyle:{  
+									color:'#328eff'  
+								}  
+							}  
+						},  
+						data:$data2 
+					},
+					{  
+						name:'今日预计收益',  
+						type:'line',  
+						stack: '今日预计收益',  
+						itemStyle : {  
+							normal : {  
+								color:'#68b828',  
+								lineStyle:{  
+									color:'#68b828'  
+								}  
+							}  
+						},  
+						data:$data3 
+					},
+					{  
+						name:'已结算',  
+						type:'line',  
+						stack: '已结算',  
+						itemStyle : {  
+							normal : {  
+								color:'#00d446',  
+								lineStyle:{  
+									color:'#00d446'  
+								}  
+							}  
+						},  
+						data:$data4 
+					}      
+				]
+			};  
+				
+			echart1.setOption(option1);
+		   //播放统计
+		   var chart2 = document.getElementById('echart2');    
+			var echart2 = echarts.init(chart2);   
+			var option2 = {
+
+				tooltip : {
+					trigger: 'axis',
+					show:false
+				},
+				calculable : true,
+				xAxis : [
+					{
+						type : 'category',
+						boundaryGap : false,
+						data: date
+					}
+				],
+				grid: {  
+					x: '-1',  
+					y: '0',  
+					x2: '0',  
+					y2: '0'  
+				},
+				yAxis : [
+					{
+					  type : 'value'			  
+					}
+				],
+				series : [
+					{
+						name:'累计播放',
+						type:'line',
+						symbol:'none',
+						itemStyle: {
+							normal: {
+								areaStyle: {color:'#febc59'},
+								color:'#febc59',  
+									lineStyle:{  
+										color:'#febc59'  
+									}  
+						}
+						},
+						data:$data1
+					},{
+						name:'日均播放',
+						type:'line',
+						symbol:'none',
+						itemStyle: {
+							normal: {
+								areaStyle: {color:'#ff9900'},
+								color:'#ff9900',  
+										lineStyle:{  
+											color:'#ff9900'  
+										}  
+						}
+						},
+						data:$data2
+					},{
+						name:'今日播放',
+						type:'line',
+						symbol:'none',
+						itemStyle: {
+							normal: {
+								areaStyle: {color:'#cce2bb'},
+								color:'#cce2bb',  
+										lineStyle:{  
+											color:'#cce2bb'  
+										}  
+						}
+						},
+						data:$data3
+					}
+				]
+			};
+			echart2.setOption(option2);
+			 //投放统计
+		   var chart3 = document.getElementById('echart3');    
+			var echart3 = echarts.init(chart3);   
+			var option3 = {
+
+				tooltip : {
+					trigger: 'axis',
+					show:false
+				},
+				calculable : true,
+				xAxis : [
+					{
+						type : 'category',
+						boundaryGap : false,
+						data: date
+					}
+				],
+				grid: {  
+					x: '-1',  
+					y: '0',  
+					x2: '0',  
+					y2: '0'  
+				},
+				yAxis : [
+					{
+					  type : 'value'			  
+					}
+				],
+				series : [
+					{
+						name:'投放广告',
+						type:'line',
+						symbol:'none',
+						itemStyle: {
+							normal: {
+								areaStyle: {color:'#328eff'},
+								color:'#328eff',  
+									lineStyle:{  
+										color:'#328eff'  
+									}  
+						}
+						},
+						data:$data1
+					},{
+						name:'商铺广告',
+						type:'line',
+						symbol:'none',
+						itemStyle: {
+							normal: {
+								areaStyle: {color:'#5ddfff'},
+								color:'#5ddfff',  
+										lineStyle:{  
+											color:'#5ddfff'  
+										}  
+						}
+						},
+						data:$data2
+					},{
+						name:'今日接受',
+						type:'line',
+						symbol:'none',
+						itemStyle: {
+							normal: {
+								areaStyle: {color:'#00d446'},
+								color:'#00d446',  
+										lineStyle:{  
+											color:'#00d446'  
+										}  
+						}
+						},
+						data:$data3
+					}
+				]
+			};
+			echart3.setOption(option3);
+			//播放类型统计
+		   var chart4 = document.getElementById('echart4');    
+			var echart4 = echarts.init(chart4);   
+			var option4 = {
+
+				tooltip : {
+					trigger: 'axis',
+					show:false
+				},
+				calculable : true,
+				xAxis : [
+					{
+						type : 'category',
+						boundaryGap : false,
+						data: date
+					}
+				],
+				grid: {  
+					x: '-1',  
+					y: '0',  
+					x2: '0',  
+					y2: '0'  
+				},
+				yAxis : [
+					{
+					  type : 'value'			  
+					}
+				],
+				series : [
+					{
+						name:'图片类',
+						type:'line',
+						symbol:'none',
+						itemStyle: {
+							normal: {
+								areaStyle: {color:'#febc59'},
+								color:'#febc59',  
+									lineStyle:{  
+										color:'#febc59'  
+									}  
+						}
+						},
+						data:$data1
+					},{
+						name:'视频',
+						type:'line',
+						symbol:'none',
+						itemStyle: {
+							normal: {
+								areaStyle: {color:'#ff9900'},
+								color:'#ff9900',  
+										lineStyle:{  
+											color:'#ff9900'  
+										}  
+						}
+						},
+						data:$data2
+					},{
+						name:'视频图片',
+						type:'line',
+						symbol:'none',
+						itemStyle: {
+							normal: {
+								areaStyle: {color:'#cce2bb'},
+								color:'#cce2bb',  
+										lineStyle:{  
+											color:'#cce2bb'  
+										}  
+						}
+						},
+						data:$data3
+					}
+				]
+			};
+			echart4.setOption(option4);
+			//屏幕旋转调整图表 
+			setTimeout(function (){
+				window.onresize = function () {
+					setTimeout(function (){
+						echart1.resize();
+						echart2.resize();
+						echart3.resize();
+						echart4.resize();
+					},200) 
+				}
+			},200)   
+		}	
+	)
+</script>
+</html>

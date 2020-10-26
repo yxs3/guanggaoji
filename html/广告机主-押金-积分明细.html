@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>支付方式</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" href="../css/reset.css">
+<link href="../css/subpage.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+<script src="../js/require.min.js"></script>
+<script src="../js/config.js"></script>
+</head>
+
+<body>
+<!--头部start-->
+ <div class="head-tit">
+		<a href="javascript:history.go(-1);" class="return"></a>
+		积分明细
+	</div>
+<!--头部end-->
+<!--内容start-->
+<div class="integral-a">
+  <div class="tp br" style="color:#666">
+    <span class="wh3 t-lt ">时间</span>
+    <span class="wh3 t-lt pg-l40">来源/原因</span>
+    <span class="wh3 t-rt pg-r30 ">积分</span>
+  </div> 
+  <a class="tp le-ht90 bdff cr99 br" href="广告机主-押金-积分详细.html">
+      <div class="img-rt">
+          <span class="wh3 t-lt ">09-23 12:00</span>
+          <span class="wh3 t-lt pg-l40">激活赠送</span>
+          <span class="wh3 pg-r30 t-rt cr33">+3500</span>
+      </div>
+  </a>  
+  <a class="tp le-ht90 bdff cr99 br" href="广告机主-押金-积分详细.html">
+      <div class="img-rt">
+          <span class="wh3 t-lt ">09-23 12:00</span>
+          <span class="wh3 t-lt pg-l40">退货</span>
+          <span class="wh3 pg-r30 t-rt">-3500</span>
+      </div>
+  </a>
+  <a class="tp le-ht90 bdff cr99 br" href="广告机主-押金-积分详细.html">
+      <div class="img-rt">
+          <span class="wh3 t-lt ">09-23 12:00</span>
+          <span class="wh3 t-lt pg-l40">支付广告费用</span>
+          <span class="wh3 pg-r30 t-rt">-3500</span>
+      </div>
+  </a>
+  <a class="tp le-ht90 bdff cr99 br" href="广告机主-押金-积分详细.html">
+      <div class="img-rt">
+          <span class="wh3 t-lt ">09-23 12:00</span>
+          <span class="wh3 t-lt pg-l40">激活赠送</span>
+          <span class="wh3 pg-r30 t-rt cr33">+3500</span>
+      </div>
+  </a>
+  
+</div>
+
+<!--内容end-->
+<!-- 底部start-->
+<!-- 底部end-->
+</body>
+<script>
+require(['jquery'],function(){
+  $(".content_payment .right").click(function(){
+	  $(this).find(".round").addClass("active").parents(".payment_a").siblings(".payment_a").find(".round").removeClass("active")
+	  })
+	  })
+</script>
+</html>

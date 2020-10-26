@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>E键广告</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="js/layer/skin/layer.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js" type="text/javascript"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="head-tit">
+		<a href="javascript:history.go(-1);" class="return"></a>
+		上传视频
+	</div>
+	<ul class="add-m-box">
+		<li>
+			<div class="add-input v-img">
+				<div class="a-wrap">
+					<input type="file" class="file-add">
+					<div class="i-img"></div>上传视频
+				</div>
+			</div>
+			<div class="add-content">
+				<select>
+					<option value="">点击选择所属行业</option>
+				</select>
+				<textarea class="textarea" placeholder="请输入视频名称"></textarea>
+			</div>
+		</li>
+		<li>
+			<div class="add-input v-img load">
+            
+				<div class="m-progress">35%</div>
+				<a class="m-del">x</a>
+			</div>
+			<div class="add-content">
+				<select>
+					<option value="">点击选择所属行业</option>
+				</select>
+				<textarea class="textarea" placeholder="请输入视频名称"></textarea>
+			</div>
+		</li>
+	</ul>
+	<div class="toAdd">
+		<div>单次上传文件不能超过10个</div>
+		<a href="javascript:void(0);" class="AddUp" id="jsAdd"><div class="i-img mlb"></div>添加
+		</a> <b>提示说明：</b>
+		<ul>
+			<li>文件要求：最大不超过200M</li>
+			<li>建议尺寸：16:9</li>
+			<li>文件格式：mp4，rm，rmvb</li>
+		</ul>
+	</div>
+ <div id="mask"></div>
+<!-- 删除弹出层 start -->
+  <div class="check-alert c-del">
+    <div class="center">是否删除视频？</div>
+    <div class="a-btn">
+      <a href="javascript:" id="c-cancel">取消</a>
+      <a href="javascript:" id="c-check">确定</a>
+    </div>
+  </div>
+<!-- 删除弹出层 end -->
+	<div class="h60"></div>
+	<div class="h110"></div>
+	<!-- 底部提交按钮 蓝色底blue类名-->
+	<div class="floor-layer w50 blue">
+		<a href="javascript:history.go(-1)">取消</a>
+		<a href="javascript:">确定</a>
+	</div>
+</body>
+<script>
+	require(['jquery','layer'],function(){
+		$(function(){
+
+			var $html = '<li><div class="add-input v-img"><div class="a-wrap"><input type="file" class="file-add">'+
+					'<div class="i-img"></div>上传视频</div></div><div class="add-content">'+
+				'<textarea class="textarea" placeholder="请输入视频名称"></textarea></div></li>';
+
+			$(document).on('change','.file-add',function(){
+	            var that = $(this);
+	            var fileData = $(this).prop('files')[0];
+	            if (!fileData || (fileData.type != 'video/mp4' && fileData.type != 'video/rm' && fileData.type != 'video/rmvb')) {
+	                layer.msg('请上传MP4,rm,rmvb格式的视频');
+	                return false;
+	            }
+	            that.parent().hide();
+	            that.parent().parent().append('<a class="m-del">x</a><i></i><img src="../images/playx2.png" />');
+	        });
+			// 添加视频
+			$('#jsAdd').bind('click',function(){
+				if($('.add-m-box li').length < 10){
+				  $('.add-m-box').append($html);
+				}else{
+					layer.msg('上传文件不能超过10个');
+				}
+				
+			})
+			// 删除
+			$(document).on('click','.m-del',function(){
+				var that = $(this),$index = that.parent().parent().index();
+				$('.c-del,#mask').show();
+				$('.c-del').attr('data-del',$index);
+			})
+			$('#c-cancel,#mask').bind('click',function(){
+				$('.c-del,#mask').hide();
+			})
+			$(document).on('click','#c-check',function(){
+				var that = $(this),$index = $('.c-del').attr('data-del');
+				$('.add-m-box li').eq($index).find('.a-wrap').show().siblings().remove();
+				$('.c-del,#mask').hide();
+			})
+		})
+	})
+</script>
+</html>

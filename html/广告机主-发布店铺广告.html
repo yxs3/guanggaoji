@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>E键广告</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/subpage.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js" type="text/javascript"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="head-tit">
+		<a href="javascript:history.go(-1);" class="return"></a>
+		发布店铺广告
+	</div>
+	<div class="E-shua">
+		<div class="fl">
+			<div class="i-img mlb"></div><!-- 您已经是我们的E键刷会员！ -->您还不是我们的E键刷会员
+		</div>
+		<a href="" class="fr" style="display: none;">
+			前往E键刷
+			<div class="i-img mlb"></div>
+		</a>
+		<a href="注册-1-确认注册.html" class="e-btn">
+			去开通
+		</a>
+	</div>
+		<div class="form-ctrl">
+			<div class="f-box">
+				<label>广告名称</label>
+				<input type="text" placeholder="请输入广告名称">
+				<div class="f-error">
+					<div class="i-img"></div>广告名称不能为空
+				</div>		
+			</div>
+            
+			<div class="f-box" style="border:0;">
+				<label>广告机</label>
+				<a href="javascript:" class="f-a js-a">
+					<span>请选择广告机</span>
+					<div class="one-line">广告机编号EJGG123456789111</div>
+					<div class="one-line">广告机编号EJGG123456789111</div>
+				</a>
+				<div class="f-tip f-top"><div class="i-img"></div></div>
+				<div class="f-error">
+					<div class="i-img"></div>广告机不能为空
+				</div>	
+			</div>
+            
+             <div class="prompt-b">已选择<span class="orange">13</span>台，<span class="blue">点此查看更多</span><span class="blue hidden">点击收起</span></div>	
+            
+			<div class="f-box">
+				<label>播放起止</label>
+				<input type="text" placeholder="开始时间" class="f-time" id="start-time" data-options='{"type":"YYYY-MM-DD","beginYear":2010,"endYear":2088}'>
+				<span class="ml30 mr30">至</span>
+				<input type="text" placeholder="结束时间" class="f-time" id="end-time" data-options='{"type":"YYYY-MM-DD","beginYear":2010,"endYear":2088}'>
+				<span class="f-num">共<span class="orange">2</span>天</span>
+			</div>
+			<div class="f-box">
+				<label>时间段</label>
+				<select class="f-time">
+					<option value="">请选择</option>
+					<option value="">1点</option>
+				</select>
+				<span class="ml30 mr30">至</span>
+				<select class="f-time">
+					<option value="">请选择</option>
+					<option value="">1点</option>
+				</select>
+			</div>
+			<div class="f-box pd0">
+				<div class="add-mate clearfix type2">
+					<div class="a-list">
+						<!-- 图片 -->
+					</div>
+					<div class="a-btn">
+						<a href="javascript:" id="js-p">
+							<div class="i-img mlb"></div>添加图片
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+  <!-- 选择广告机弹出层 start -->
+  <div class="float-ly fl1 bg-gray">
+	<div class="head-tit">
+		<a href="javascript:" class="return h-cancel js-cancel"><div class="i-img"></div></a>
+		选择广告机
+	</div>
+	<div class="all-ad-l">
+		<ul>
+			<li>
+				<a href="javascript:">
+					<div class="a-tip">买</div>
+					<div class="fl v-img"><i></i><img src="../images/user.png" alt="广告机"></div>
+					<div class="ad-text">
+						<div class="one-line a-name">华宝广告机华宝广告机</div>
+						<div class="a-data">
+							<div>类型<div class="one-line">室外广告机</div></div>
+							<div>播放次数<div class="one-line">4222</div></div>
+							<div>累计金额<small>(元)</small><div class="one-line">84368.57</div></div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="a-addr">
+						<div>广告机编号：EJGG123456789111</div>
+						<div class="one-line">位置：广东学圳市宝安区西乡河西二坊34河西村洒下棋</div>
+						<div class="i-img"></div>
+					</div>
+				</a>
+			</li>
+			<li class="active">
+				<a href="javascript:">
+					<div class="a-tip orange">租</div>
+					<div class="fl v-img"><i></i><img src="../images/user.png" alt="广告机"></div>
+					<div class="ad-text">
+						<div class="one-line a-name">华宝广告机华宝广告机</div>
+						<div class="a-data">
+							<div>类型<div class="one-line">室外广告机</div></div>
+							<div>播放次数<div class="one-line">4222</div></div>
+							<div>累计金额<small>(元)</small><div class="one-line">84368.57</div></div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="a-addr">
+						<div>广告机编号：EJGG123456789111</div>
+						<div class="one-line">位置：广东学圳市宝安区西乡河西二坊34河西村洒下棋</div>
+						<div class="i-img"></div>
+					</div>
+				</a>
+			</li>
+		</ul>
+		<!-- 加载 -->
+		<div class="loadding"><img src="../images/loadding.gif"></div>
+		<div class="no-more">已经没有更多了</div>
+	</div>
+    <div class="h110"></div>
+    <div class="floor-layer blue js-cancel">
+      确定
+    </div>
+  </div>
+  <!-- 选择广告机弹出层 end -->
+    <!-- 选择图片 start -->
+  <div class="float-ly fl4 bg-gray">
+	<div class="head-tit">
+		<a href="javascript:" class="return h-cancel js-cancel"><div class="i-img"></div></a>
+		选择商家广告图片
+	</div>
+	<div class="mate-box">
+		<ul class="type4">
+			<li class="active">
+				<div class="m-content">
+					<img src="../images/bg.jpg" alt="素材">
+					
+					<div class="m-name one-line">素材名称</div>
+					<div class="m-date">2016-11-03 12:15</div>
+				</div>
+			</li>
+			<li>
+				<div class="m-content">
+					<img src="../images/bg.jpg" alt="素材">
+					
+					<div class="m-name one-line">素材名称</div>
+					<div class="m-date">2016-11-03 12:15</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- 加载 -->
+	<div class="loadding"><img src="../images/loadding.gif"></div>
+	<div class="no-more">已经没有更多了</div>
+  </div>
+  <!-- 选择图片 end -->
+ <div class="h110"></div>
+    <a class="floor-layer blue">
+      <div class="i-img i-check mlb"></div>发布广告
+  </a>
+</body>
+<script>
+	require(['jquery'],function($){
+		// 隐藏
+		$('.js-cancel').bind('click',function(){
+			$('.float-ly,.f-a span').hide();
+			$('.f-a .one-line').show();
+		})
+		// 选择广告机
+		$('.js-a').bind('click',function(){
+			$('.fl1').show();
+		})
+		require(['date'],function(){
+			$.date('#start-time');
+			$.date('#end-time');
+		})
+	  //添加图片
+	  require(['module1']);
+	})
+</script>
+</html>

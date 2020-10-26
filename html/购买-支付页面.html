@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>E键广告</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/subpage.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js" type="text/javascript"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+<section class="content_four">
+  <!--头部start-->
+ <div class="head-tit bd-red">
+		<a href="javascript:history.go(-1);" class="return"></a>
+		支付方式
+	</div>
+<!--头部end-->
+  <section class="time">
+    <section>支付剩余时间</section>
+    <section class="auto">
+      <span class="background3"></span>
+      <span class="background4"></span>
+      <span class="hour jsMin">15</span>
+      <i>:</i> 
+      <span class="background5"></span>
+      <span class="background6"></span>
+      <span class="mini jsSec">00</span> 
+    </section>
+  </section>
+  <section>
+      <a>
+           <img src="../images/weixin.png" alt="微信">
+           <section>
+               <span>微信支付</span>
+               <span>推荐安装微信5.0及以上版本的用户使用</span>
+           
+           </section>
+          
+           <span class="active"></span>    
+      </a>
+      <a>
+           <img src="../images/zhifubao.png" alt="支付宝">
+           <section>
+               <span>微信支付</span>
+               <span>推荐安装支付宝5.0及以上版本的用户使用</span>
+           </section>
+           <span class="border"></span>
+      </a>
+  
+  </section>
+     
+</section>
+<div class="mask" style="opacity: 0.3;display: none;"></div>
+<img src="../images/details/ico.png" alt="" class="wxpay-layer wx1" style="display: none;">
+<div class="wxpay-layer type2" style="display: none;"><img src="../images/details/ico_02.png" width="100%">
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+</div>
+<div class="wxpay-layer type2" style="display: none;"><img src="../images/details/ico_02_2.png" width="100%">
+<ul>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+  <li></li>
+</ul>
+</div>
+<div class="big-btn">
+    <a id="jsBtn">
+        确认支付<span class="fs40">￥<span id="jsMoney"></span></span>
+    </a>
+</div>
+<script>
+    require(['jquery'],function(){
+     var isfirst = window.location.href.indexOf('p=1');
+     if(isfirst == -1){
+        $('#jsMoney').text('1450');
+     }else{
+        $('#jsMoney').text('35');
+     } 
+     $('#jsBtn').bind('click',function(){
+          $('.mask').fadeIn(function(){
+            $('.wx1').show(function(){
+              setTimeout(function() {
+                 if(isfirst == -1){
+                  $('.wxpay-layer.type2').eq(1).show();
+                 }else{
+                    $('.wxpay-layer.type2').eq(0).show();
+                 }
+                 var i = 0;
+                 setInterval(function(){
+                    $(".wxpay-layer li").eq(i).show();
+                    if(i == 5){
+                      if(isfirst == -1){
+                          window.location.href = '购买-支付成功.html?p=2';
+                       }else{
+                          window.location.href = '购买-支付成功.html?p=1';
+                       } 
+                    }
+                    i++;
+                 },500) 
+              }, 500);
+            });
+          });
+     })
+     $(".content_four > section:nth-of-type(2)>a").click(function(){
+         $(this).find("span").addClass("active").removeClass("border").parents(".content_four > section:nth-of-type(2)>a").siblings().find(">span").addClass("border").removeClass("active")
+      })
+	// 支付倒计时
+  var payTime = window.setInterval(function() {
+    var sec = $('.jsSec').text(),
+    min = $('.jsMin').text();
+    if(sec == 0 && min == 0){
+      clearInterval(payTime)
+    }else{
+      if(sec == 0){
+        if(min !=0){
+         sec=60;
+         min--;
+         min < 10&&(min='0'+min);
+       }else{
+        clearInterval(payTime);
+      }
+    }
+      sec--;
+      sec < 10&&(sec='0'+sec);
+      $('.jsSec').text(sec);
+      $('.jsMin').text(min);
+    }
+  },1000)
+    })
+</script>
+
+</html>

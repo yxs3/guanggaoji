@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>E键广告</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/main.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js" type="text/javascript"></script>
+<script src="../js/config.js"></script>
+</head>
+<body class="fbg">
+	<!-- 头部 -->
+	<div class="head-tit">
+		<a href="javascript:history.go(-1);" class="return"></a>
+		意见反馈
+	</div>
+	<div class="feedback">
+		<div class="f-type">
+			反馈类型：
+            <button class="radio-check" v-on:click="wClass(3)" v-bind:class='{isCheck:num==3}'><span class="mlb"></span>问题</button>
+			<button class="radio-check" v-on:click="wClass(0)" v-bind:class='{isCheck:num==0}'><span class="mlb"></span>建议</button>
+			<button class="radio-check" v-on:click="wClass(1)" v-bind:class='{isCheck:num==1}'><span class="mlb"></span>投诉</button>	
+		</div>
+		<textarea class="textarea" placeholder="您的意见将有助于我们改进产品和保证服务质量！"></textarea>
+	</div>
+	<!-- 有内容输入时增加blue类名-->
+	<div class="floor-layer">
+		提交
+	</div>
+
+</body>
+<script>
+	require(['jquery','vue'],function($,Vue){
+		new Vue({
+		    el:".feedback",
+		    data:{
+		        num:0
+		    },
+		    mounted:function(){
+				var _this = this;
+			
+			},
+			methods:{ 
+				wClass:function(index){
+					this.num = index;
+				}
+			}
+		});
+
+	})
+</script>
+</html>

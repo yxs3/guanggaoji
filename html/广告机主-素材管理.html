@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>E键广告</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/main.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js" type="text/javascript"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="head-tit">
+		<a href="javascript:history.go(-1);" class="return"></a>
+		素材管理
+	</div>
+	<!-- 切换 -->
+	<div class="switch-link clearfix">
+		<a href="广告机主-素材管理.html" class="active">视频</a>
+		<a href="广告机主-素材管理-图片.html">图片</a>
+	</div>
+	
+	<div class="mate-box">
+		<ul>
+			<li>
+				<div class="m-content">
+					<!-- 审核中 -->
+					<div class="relative">
+						<img src="../images/bg.jpg" alt="素材">
+						<div class="check-ing"><div class="c-text">审核中</div></div>
+					</div>
+					<a class="m-del">x</a>
+					<div class="m-name one-line">素材名称</div>
+					<div class="m-indu one-line">美食美食美食</div>
+					<div class="m-date">2016-11-03 12:15</div>
+				</div>
+			</li>
+			<li>
+				<div class="m-content">
+					<!-- 审核失败 -->
+					<div class="relative">
+						<img src="../images/bg.jpg" alt="素材">
+						<div class="check-ing check-no"><div class="c-text">审核失败<div>视频尺寸不符合广告机屏幕对应的尺寸要求</div></div></div>
+					</div>
+					<a class="m-del">x</a>
+					<a href="广告机主-素材管理-上传视频.html" class="re-update">重新上传</a>
+				</div>
+			</li>
+			<li>
+				<div class="m-content">
+					<img src="../images/bg.jpg" alt="素材">
+					<a class="m-del">x</a>
+					<div class="m-name one-line">素材名称</div>
+					<div class="m-indu one-line">美食美食美食</div>
+					<div class="m-date">2016-11-03 12:15</div>
+				</div>
+			</li>
+			<li>
+				<div class="m-content">
+					<img src="../images/bg.jpg" alt="素材">
+					<a class="m-del">x</a>
+					<div class="m-name one-line">素材名称</div>
+					<div class="m-indu one-line">美食美食美食</div>
+					<div class="m-date">2016-11-03 12:15</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!-- 加载 -->
+	<div class="loadding"><img src="../images/loadding.gif"></div>
+	<div class="no-more">已经没有更多了</div>
+	  <div id="mask"></div>
+<!-- 删除弹出层 start -->
+  <div class="check-alert c-del">
+    <div class="center">是否删除视频？</div>
+    <div class="a-btn">
+      <a href="javascript:">取消</a>
+      <a href="javascript:">确定</a>
+    </div>
+  </div>
+<!-- 删除弹出层 end -->
+	<!-- 撑起底部fixed层占的高度 如提交按钮 尾部导航等-->
+	<div class="h110"></div>
+	<!-- 底部提交按钮 蓝色底blue类名-->
+	<div class="floor-layer blue">
+		<a href="广告机主-素材管理-上传视频.html" class="block">上传视频</a>
+	</div>
+</body>
+<script>
+	require(['jquery'],function(){
+		$('.m-del').bind('click',function(){
+			$('.c-del,#mask').show();
+		})
+		$('.check-alert a:nth-child(1),#mask').bind('click',function(){
+			$('.c-del,#mask').hide();
+		})
+	})
+</script>
+</html>

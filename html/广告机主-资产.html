@@ -1,0 +1,387 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>资产</title>
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<link rel="stylesheet" href="../css/reset.css">
+<link href="../css/subpage.css" rel="stylesheet">
+<link href="../css/main.css" rel="stylesheet">
+<script src="../js/require.min.js"></script>
+<script src="../js/config.js"></script>
+</head>
+
+<body>
+<!--头部start-->
+<div class="head-tit">
+		<a href="javascript:history.go(-1);" class="return"></a>
+	 资产
+	</div>
+<!--头部end-->
+<!--内容start-->
+ <div class="balance_record">
+   <div class="balance pg_l_r height314">
+       <div class="balance_classify">
+          <!--提现显示-->
+           <div class="fs28">
+                  收益金额
+                  <span class="fs20">（元）</span>
+                  <a class="w-cash">提现</a>
+           </div>
+          <!--提现显示-->
+           <!-- <div class="fs28 ">
+                  可用余额
+                  <span class="fs20">（元）</span>
+           </div> -->
+           <div class="fs80">8000.50</div>
+       </div>
+       <div class="centent width_half">
+          <span class="pg30">
+              <i class="red left wh"></i>
+              <i class="left">未结算</i>
+              <i class="left fs20">(元)</i>
+          </span>
+          <span class="yellow fs32">3610.5400</span>
+       </div>
+       <div class="centent width_half">
+          <span class="pg30">
+              <i class="green left wh"></i>
+              <i class="left">已结算</i>
+              <i class="left fs20">(元)</i>
+          </span>
+          <span class="fs32">3610.5400</span>
+       </div>
+   </div>
+   <div  class="nav_a m-l0">
+      <a class="content" href="广告机主--余额充值.html">
+          <img src="../images/asset_a.png" class="img_a">
+          <span>充值余额</span>
+      </a>
+      <a class="content" href="广告机主-资产-结算记录-月.html">
+          <img src="../images/asset_b.png" class="img_b">
+          <span class="bule">结算记录</span>
+      </a>
+      <a class="content" href="广告机主-交易记录.html">
+          <img src="../images/asset_c.png" class="img_b">
+          <span>交易记录</span>
+      </a>
+   </div>
+   <!--提现显示-->
+   <div  class="nav_a m-l0 hidden">
+      <a class="content wh50" href="广告机主-资产-结算记录-月.html">
+         <div class="rt-a"> 
+            <img src="../images/asset_b.png" class="img_b">
+            <span class="bule">结算记录</span>
+         </div>
+      </a>
+      <a class="content wh50" href="广告机主-资产-收支明细.html">
+          <div class="lt-a"> 
+               <img src="../images/asset_c.png" class="img_b">
+               <span>收支明细</span>
+          </div>
+      </a>
+   </div>
+   <!--提现显示-->
+   <!--押金和积分-->
+   <div class="pg20 le-ht80 bdff">
+    <a class="img-rt" href="广告机主-押金-积分明细.html">
+      <span class="bg-bule29 m-t5">押</span>
+      <span class="fs26 dy-a m-l10">押金<small class="cr99">(元)</small>5000</span>
+      <span class="right cr99">押金明细</span>
+    </a>
+   </div>
+   <div class="pg20 le-ht80 bdff">
+    <a class="img-rt">
+      <img src="../images/integral_img.png" class="left m-t5">
+      <span class="fs26 dy-a m-l10">广告机积分：50000</span>
+      <span class="right cr99">积分明细</span>
+    </a>
+   </div>
+   <!--收益-->
+   <div class="index-chart">
+			<div class="i-tit">
+				<div class="i-t-wrap">
+					<div class="fl">
+						<div class="i-img i-tf mlb"></div>收益<small>(元)</small>
+					</div>
+				</div>
+			</div>
+			<div class="i-g col-3">
+				<ul>
+					<li>
+						<span class="blue circle"></span> 累计收益
+						<div class="one-line red2">
+							2,435,045
+						</div>
+					</li>
+					<li>
+						<span class="blue2 circle"></span> 日均受益
+						<div class="one-line green">
+							564,560
+						</div>
+					</li>
+					<li>
+						<span class="green circle"></span> 昨日收益
+						<div class="one-line blue">
+							5,024
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div id="echart3"></div>
+			<div class="i-date">
+				<!-- 显示8个 -->
+				<ul>
+					<li><span>12月</span></li>
+					<li><span>1月</span></li>
+					<li><span>2月</span></li>
+					<li><span>3月</span></li>
+					<li><span>4月</span></li>
+					<li><span>5月</span></li>
+					<li><span>6月</span></li>
+					<li><span>7月</span></li>
+				</ul>
+			</div>
+     </div>
+   <!--收益-->
+   <!-- 支出-->
+     <div class="index-chart">
+			<div class="i-tit">
+				<div class="i-t-wrap">
+					<div class="fl">
+						<div class="i-img i-bf mlb"></div>支出<small>(个)</small>
+					</div>
+				</div>
+			</div>
+			<div class="i-g col-3">
+				<ul>
+					<li>
+						<span class="orange2 circle"></span>发布共享广告
+						<div class="one-line red2">
+							50,000
+						</div>
+					</li>
+					<li>
+						<span class="orange circle"></span>购买广告机
+						<div class="one-line green">
+							50,000
+						</div>
+					</li>
+					<li>
+						<span class="green3 circle"></span>租赁广告机
+						<div class="one-line blue">
+							50,000
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div id="echart4"></div>
+			<div class="i-date">
+				<!-- 显示8个 -->
+				<ul>
+					<li><span>12月</span></li>
+					<li><span>1月</span></li>
+					<li><span>2月</span></li>
+					<li><span>3月</span></li>
+					<li><span>4月</span></li>
+					<li><span>5月</span></li>
+					<li><span>6月</span></li>
+					<li><span>7月</span></li>
+				</ul>
+			</div>
+     </div>
+   <!--支出-->
+   <div class="height300"></div>
+   
+ </div>
+<!--内容end-->
+<!-- 底部start-->
+<footer id="foot">
+		<ul>
+			<li><a href="../html/index.html"><div class="f-img ico-1"></div>首页</a></li>
+			<li class="new"><a href="../html/广告机主-资产.html"><div class="f-img ico-2"></div>资产</a></li>
+			<li class="new"><a href="../html/广告机主-我的首页.html"><div class="f-img ico-3"></div>我的</a></li>
+		</ul>
+	</footer>
+<!-- 底部end-->
+</body>
+<script src="http://echarts.baidu.com/build/dist/echarts.js"></script>
+<script>
+		 require(  
+            [  //模块化加载折线图
+                'echarts',  
+				'echarts/chart/line'
+			],  
+         function (echarts) { 
+			//日期数据固定10列
+			 var $data1 = [],$data2 = [],$data3 = [],$data4 = [],date = [];
+			for(var i = 1;i <= 10;i ++){
+				$data1.push(parseInt(Math.random()*100000));
+				$data2.push(parseInt(Math.random()*100000));
+				$data3.push(parseInt(Math.random()*100000));
+				$data4.push(parseInt(Math.random()*100000));
+				date.push(i)
+			}
+			 //收益
+		   var chart3 = document.getElementById('echart3');    
+			var echart3 = echarts.init(chart3);   
+			var option3 = {
+				tooltip : {
+					trigger: 'axis',
+					show:false
+				},
+				calculable : true,
+				xAxis : [
+					{
+						type : 'category',
+						boundaryGap : false,
+						data: date
+					}
+				],
+				grid: {  
+					x: '-1',  
+					y: '0',  
+					x2: '0',  
+					y2: '0'  
+				},
+				yAxis : [
+					{
+					  type : 'value'			  
+					}
+				],
+				series : [
+					{
+						name:'累计收益',
+						type:'line',
+						symbol:'none',
+						itemStyle: {
+							normal: {
+								areaStyle: {color:'#328eff'},
+								color:'#328eff',  
+									lineStyle:{  
+										color:'#328eff'  
+									}  
+						}
+						},
+						data:$data1
+					},{
+						name:'日均收益',
+						type:'line',
+						symbol:'none',
+						itemStyle: {
+							normal: {
+								areaStyle: {color:'#5ddfff'},
+								color:'#5ddfff',  
+										lineStyle:{  
+											color:'#5ddfff'  
+										}  
+						}
+						},
+						data:$data2
+					},{
+						name:'昨日收益',
+						type:'line',
+						symbol:'none',
+						itemStyle: {
+							normal: {
+								areaStyle: {color:'#00d446'},
+								color:'#00d446',  
+										lineStyle:{  
+											color:'#00d446'  
+										}  
+						}
+						},
+						data:$data3
+					}
+				]
+			};
+			echart3.setOption(option3);
+			<!--支出-->
+			var chart4 = document.getElementById('echart4');    
+			var echart4 = echarts.init(chart4);   
+			var option4 = {
+
+				tooltip : {
+					trigger: 'axis',
+					show:false
+				},
+				calculable : true,
+				xAxis : [
+					{
+						type : 'category',
+						boundaryGap : false,
+						data: date
+					}
+				],
+				grid: {  
+					x: '-1',  
+					y: '0',  
+					x2: '0',  
+					y2: '0'  
+				},
+				yAxis : [
+					{
+					  type : 'value'			  
+					}
+				],
+				series : [
+					{
+						name:'发布共享广告',
+						type:'line',
+						symbol:'none',
+						itemStyle: {
+							normal: {
+								areaStyle: {color:'#febc59'},
+								color:'#febc59',  
+									lineStyle:{  
+										color:'#febc59'  
+									}  
+						}
+						},
+						data:$data1
+					},{
+						name:'购买广告机',
+						type:'line',
+						symbol:'none',
+						itemStyle: {
+							normal: {
+								areaStyle: {color:'#ff9900'},
+								color:'#ff9900',  
+										lineStyle:{  
+											color:'#ff9900'  
+										}  
+						}
+						},
+						data:$data2
+					},{
+						name:'租赁广告机',
+						type:'line',
+						symbol:'none',
+						itemStyle: {
+							normal: {
+								areaStyle: {color:'#cce2bb'},
+								color:'#cce2bb',  
+										lineStyle:{  
+											color:'#cce2bb'  
+										}  
+						}
+						},
+						data:$data3
+					}
+				]
+			};
+			echart4.setOption(option4);
+			//屏幕旋转调整图表 
+			setTimeout(function (){
+				window.onresize = function () {
+					setTimeout(function (){
+						echart3.resize();
+						echart4.resize();
+					},200) 
+				}
+			},200)   
+		}	
+	)
+</script>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>E键广告</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/date.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js" type="text/javascript"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="head-tit">
+		<a href="javascript:history.go(-1);" class="return"></a>
+		播放记录
+	</div>
+	<!-- 空提示 -->
+	<div class="nothing" style="display: none;">
+		<img src="../images/orderform_img.png" style="width:4.1rem;">
+		未找到相关信息
+	</div>
+	<div class="all-ad-l">
+		<ul>
+			<li>
+				<a href="javascript:">
+					<div class="a-tip">买</div>
+					<div class="fl v-img"><i></i><img src="../images/user.png" alt="广告机"></div>
+					<div class="ad-text">
+						<div class="one-line a-name">华宝广告机华宝广告机</div>
+						<div class="a-data">
+							<div>类型<div class="one-line">室外广告机</div></div>
+							<div>播放次数<div class="one-line">4222</div></div>
+							<div>累计金额<small>(元)</small><div class="one-line">84368.57</div></div>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+					<div class="a-addr">
+						<div>广告机编号：EJGG123456789111</div>
+						<div class="one-line">位置：广东学圳市宝安区西乡河西二坊34河西村洒下棋</div>
+						<div class="i-img"></div>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<!-- 格式 17-05-05 12:00:00 -->
+	<div class="select-date" style="display:none;">
+		<div class="a-img s1"></div>
+		<span class="s-time"><input placeholder="选择日期" type="text" id="start-time"><i class="a-img"></i></span>
+		<span class="m">至</span>
+		<span class="s-time"><input placeholder="选择日期" type="text" id="end-time"><i class="a-img"></i></span>
+	</div>
+	<div id="list" class="type2" style="display:none;">
+		<div class="l-tit">
+			<div class="fl">2016-09-21</div>
+			<div class="fr">
+				播放<span class="orange">6</span>次<span class="ml30"></span>
+				总计6个计费单位<span class="gray">/6秒</span>
+			</div>
+		</div>
+		<div class="l-tit">
+			<div class="fl">2016-09-21</div>
+			<div class="fr">
+				播放<span class="orange">6</span>次<span class="ml30"></span>
+				总计6个计费单位<span class="gray">/6秒</span>
+			</div>
+		</div>
+		<div class="l-tit">
+			<div class="fl">2016-09-21</div>
+			<div class="fr">
+				播放<span class="orange">6</span>次<span class="ml30"></span>
+				总计6个计费单位<span class="gray">/6秒</span>
+			</div>
+		</div>
+		<div class="l-tit">
+			<div class="fl">2016-09-21</div>
+			<div class="fr">
+				播放<span class="orange">6</span>次<span class="ml30"></span>
+				总计6个计费单位<span class="gray">/6秒</span>
+			</div>
+		</div>
+	</div>
+	<table class="table-list">
+		<tr>
+			<td>2016-09-21</td>
+			<td>播放<span class="orange">6</span>次</td>
+			<td>总计6个计费单位<span class="gray">/6秒</span></td>
+		</tr>
+		<tr>
+			<td>2016-09-21</td>
+			<td>播放<span class="orange">6</span>次</td>
+			<td>总计6个计费单位<span class="gray">/6秒</span></td>
+		</tr>
+		<tr>
+			<td>2016-09-21</td>
+			<td>播放<span class="orange">6</span>次</td>
+			<td>总计6个计费单位<span class="gray">/6秒</span></td>
+		</tr>
+		<tr>
+			<td>2016-09-21</td>
+			<td>播放<span class="orange">6</span>次</td>
+			<td>总计6个计费单位<span class="gray">/6秒</span></td>
+		</tr>
+	</table>
+	<div class="loadding"><img src="../images/loadding.gif"></div>
+	<div class="no-more">已经没有更多了</div>
+	<!-- 撑起底部fixed层占的高度 如提交按钮 尾部导航等-->
+	<div class="h110"></div>
+
+	<!-- 底部提交按钮 蓝色底blue类名-->
+	<a class="floor-layer blue" href="javascript:history.go(-1)">
+		返回
+	</a>
+	
+</body>
+<script>
+	require(['jquery','date'],function(){
+		
+		// sfm 是否需要时分秒 type 格式 一个页面只能有一个配置 {sfm:false,type:2}
+		$.date('#start-time',{sfm:false,type:2});
+		$.date('#end-time');
+	})
+</script>
+</html>

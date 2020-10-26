@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>E键广告</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/subpage.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js" type="text/javascript"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+<!--内容区域-->
+   <div class="buy-details">
+      <div class="tp-img"><img src="../images/details/details_e.jpg"></div>
+      <div class="pg20 bd-ff ow-hn">
+          <div class="ow-a"><span class="fs30 left mr10">普洱—古树茶王</span><a class="fn-a mr15 mr-5">线下配送</a><a class="fn-a">门店自提</a><a class="share"></a></div>
+          <div class="red"><i class="fs32">￥1450.00</i></div>
+          <div class="fs26 pt br-b"><span class="lt">快递：免运费</span><span class="rt">深圳</span><span class="middel">月销：128笔</span></div>
+      </div>
+      <div class="cr-ht20"></div>
+      <div class="number">
+          <div class="br-b ow-hn pr20">
+               <div class="ft">产地：云南</div>
+               <div class="rt"><i class="ft">数量：</i><span class="minus">-</span><input type="text" value="0" maxlength='5'onafterpaste="this.value=this.value.replace(/[^\d\s]/g,'')" onkeyup="this.value=this.value.replace(/[^\d\s]/g,'')"><span class="add">+</span></div>
+          </div>
+      </div>
+      <div class="title mt20 mb10">
+         <div class="ft tab-a"><a class="active rt-a"><span class=""></span>商品详情</a></div>
+         <div class="rt tab-a"><a class="ft-a"><span class="hidden"></span>产品信息溯源</a></div>
+      </div>
+      <!--商品详情-->
+      <div class="details-img">
+         <img src="../images/details/details_f.jpg">
+         <img src="../images/details/details_g.jpg">
+         <img src="../images/details/details_h.jpg">
+         <img src="../images/details/details_p.jpg">
+      </div>
+      <!--产品信息溯源-->
+      <div class="details-img hidden">
+           <img src="../images/details/a_details.jpg">
+           <img src="../images/details/b_details.jpg">
+      </div>
+      <div class="height97"></div>
+      <!--底部购买按钮-->
+       <div class="btn-a">
+         <a class="bd-yellow">加入购物车</a>
+         <a class="bd-red">立即购买</a>
+      </div>
+     <!--底部购买按钮-->
+   </div> 
+<!--内容区域-->
+<script>
+require(['jquery'],function(){
+	    $('.number .rt span.add').click(function(){
+			var b=$('.number .rt input').val()
+			i=b
+			if(i<0){
+				i=1}
+				i++;
+			 $('.number .rt input').val(i);
+			 console.log(i)
+			})
+	     $('.number .rt span.minus').click(function(){
+			  var b=$('.number .rt input').val()
+			    i=b
+				i--;
+				if(i<0){i=0}
+			 $('.number .rt input').val(i);
+			 console.log(i)
+			})
+		$('.buy-details .title a').click(function(){
+			var number=$(this).index('.title a')
+			$(this).find('span').removeClass("hidden").parents('.tab-a').siblings('div').find('span').addClass('hidden');
+			$(this).addClass('active').parent().siblings('div').find("a").removeClass('active');
+			$('.details-img').eq(number).show().siblings(".details-img").hide();
+			})
+   })
+</script>
+</body>
+</html>

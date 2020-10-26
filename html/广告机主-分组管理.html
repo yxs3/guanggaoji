@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>E键广告</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/swiper.min.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js" type="text/javascript"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<div class="head-tit">
+		<a href="javascript:history.go(-1);" class="return"></a>
+		分组管理
+	</div>
+	<div class="group-list">
+		<ul>
+			<li>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<a href="javascript:" class="swiper-slide">
+							<div class="fl one-line">未分组</div>
+							<div class="fr"><span class="g-num">43</span>台<div class="i-img i-right"></div></div>
+						</a>	
+						<div class="g-ctrl swiper-slide">
+							<a href="广告机主-分组列表.html" class="g-edit">编辑</a>
+							<a href="javascript:" class="g-del">删除</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<a href="javascript:" class="swiper-slide">
+							<div class="fl one-line">未分组</div>
+							<div class="fr"><span class="g-num">43</span>台<div class="i-img i-right"></div></div>
+						</a>	
+						<div class="g-ctrl swiper-slide">
+							<a href="广告机主-分组列表.html" class="g-edit">编辑</a>
+							<a href="javascript:" class="g-del">删除</a>
+						</div>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<a href="javascript:" class="swiper-slide">
+							<div class="fl one-line">未分组</div>
+							<div class="fr"><span class="g-num">43</span>台<div class="i-img i-right"></div></div>
+						</a>	
+						<div class="g-ctrl swiper-slide">
+							<a href="广告机主-分组列表.html" class="g-edit">编辑</a>
+							<a href="javascript:" class="g-del">删除</a>
+						</div>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div id="mask"></div>
+	<!-- 删除弹出层 start -->
+	<div class="check-alert c1">
+		<div class="center">是否删除该分组？</div>
+		<div class="a-btn">
+			<a href="javascript:">取消</a>
+			<a href="javascript:">立即删除</a>
+		</div>
+	</div>
+<!-- 删除弹出层 end -->	
+<!-- 无法删除弹出层 start -->
+<div class="check-alert c2">
+	<div class="center">请先移动或移除该分组下的广<br>
+	告机才可进行删除分组！</div>
+	<div class="a-btn">
+		<a href="javascript:">取消</a>
+		<a href="javascript:">确定</a>
+	</div>
+</div>
+<!-- 无法删除弹出层 end -->	
+<!-- 添加分组弹出层 start -->
+<div class="check-alert c3">
+	<div class="group-input">
+		<input type="text" class="input" placeholder="请输入分组名称">
+		<div class="g-tip">可输入10个字</div>
+	</div>
+	<div class="a-btn">
+		<a href="javascript:">取消</a>
+		<a href="javascript:">确定</a>
+	</div>
+</div>
+<!-- 添加分组弹出层 end -->	
+<!-- 底部提交按钮 蓝色底blue类名-->
+	<a class="floor-layer blue">
+		<div class="i-img mlb"></div>添加分组
+	</a>
+</body>
+<script>
+	require(['jquery','swiper'],function(){
+		$(window).on('resize',function(){
+			setTimeout(function(){
+				$.each(mySwiper,function(){
+					this.onResize()
+				});
+			},50);
+		})
+		var mySwiper = new Swiper('.swiper-container',{
+			slidesPerView: 'auto',
+			resistanceRatio:0
+		});
+		//删除
+		$('.g-del').bind('click',function(){
+			alert($(this).parent().prev().children('.fr').children('span').text());
+			$('#mask,.c1').show();
+		})
+		$('.c1').bind('click',function(){
+			$('.c2').show();
+		})
+		$('.floor-layer').bind('click',function(){
+			$('#mask,.c3').show();
+		})
+	})
+</script>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0" />
+<meta content="telephone=no" name="format-detection" />
+<title>绑定成功</title>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/subpage.css">
+<link rel="stylesheet" href="../css/swiper.min.css">
+<link rel="stylesheet" href="../css/main.css">
+<!-- JavaScript -->
+<script src="../js/require.min.js"></script>
+<script src="../js/config.js"></script>
+</head>
+<body>
+<!--头部start-->
+<div class="head-tit">
+		<a href="javascript:history.go(-1);" class="return"></a>
+	二维码管理
+	</div>
+<!--头部end-->
+<div class="qr-code">
+     <div class="bdff">
+          <div class="code">
+             <!-- banner start -->
+                 <div class="swiper-container swiper-banner" style="height:100%">
+   
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="../images/play_record_a.png">
+      </div>
+      <div class="swiper-slide "><i></i><img src="../images/bird_b.jpg">
+      </div>
+      <div class="swiper-slide "><i></i><img src="../images/qr_code/qr-_code.jpg">
+      </div>
+    </div>
+  </div>  
+             <!-- banner end -->
+          </div>
+          <div class="title-hint">船旗舰店客服标题二维码<img src="../images/qr_code/writing_pad.png"></div>
+          <div class="prompt-b m-b40">
+              <div class="img-a">
+                     <div class="img-b">广告机默认显示E键云通二维码；</div>
+                     <div class="img-b">E键刷商户默认显示E键刷支付码；</div>
+                     <div class="img-b">您还可上传5张二维码以供自定义选择；</div>
+              </div>
+          </div>
+          <div class="pg10"> 
+              <div class="bd-wh">
+                   <div class="pg15">
+                     <div class="left">当前二维码已使用广告机</div>
+                     <div class="red right"><a>未设置</a><a class="hidden">16台</a></div>
+                  </div>
+              </div> 
+          </div>
+         <!-- 上传图片-->
+         <ul>
+            <li class="active">
+               <div class="v-img img-upload"><i></i><img src="../images/play_record_a.png">
+                   <!--审核失败给class加上active-->
+                   <span class="delete-b"></span>
+                   <!--审核失败给class加上active-->
+                   <!--审核中显示-->
+                    <div class="inner-mask yellow hidden">审核中</div>
+                   <!--审核中显示-->
+                   <!--审核失败显示-->
+                    <div class="inner-mask yellow bd-red hidden">审核失败</div>
+                   <!--审核失败显示-->
+               </div>
+            </li>
+            <li class="">
+               <div class="v-img img-upload"><i></i><img src="../images/bird_b.jpg">
+                   <!--审核失败给class加上active-->
+                   <span class="delete-b"></span>
+                   <!--审核失败给class加上active-->
+                   <!--审核中显示-->
+                    <div class="inner-mask yellow hidden">审核中</div>
+                   <!--审核中显示-->
+                   <!--审核失败显示-->
+                    <div class="inner-mask yellow bd-red hidden">审核失败</div>
+                   <!--审核失败显示-->
+               </div>
+            </li>
+            <li class="">
+               <div class="v-img img-upload"><i></i><img src="../images/qr_code/qr-_code.jpg">
+                   <!--审核失败给class加上active-->
+                   <span class="delete-b"></span>
+                   <!--审核失败给class加上active-->
+                   <!--审核中显示-->
+                    <div class="inner-mask yellow hidden">审核中</div>
+                   <!--审核中显示-->
+                   <!--审核失败显示-->
+                    <div class="inner-mask yellow bd-red hidden">审核失败</div>
+                   <!--审核失败显示-->
+               </div>
+            </li>
+            <li class="mg0">
+                <div class="img-upload file-upload">
+                  <img src="../images/append_img.png" class="add-img">
+                  <div>上传</div>
+                </div>
+                <input type="file" class="file hidden" accept="image/jpg,image/jpeg,image/png">
+            </li>
+         </ul>
+         <!-- 上传图片-->
+     </div>
+     <div class="height125"></div>
+</div>
+<!--删除弹框-->
+<div class="mask hidden"></div>
+<div class="bomb-box delete-a hidden">
+     <div class="pg20 br-b">
+         <div class="top">确认删除二维码？	</div>
+         <div class="middel">删除后，已使用该二维码的广告机将自动使用默认二维码，直到您重新设置！</div>
+     </div>
+     <div class="bottom">
+       <a class="br-r">取消</a>
+       <a class="red br-l">确认删除</a>	
+     </div>
+</div>
+<!--删除弹框-->
+<script>
+require(['jquery','swiper','layer'],function(){
+var n=$(window).height()
+var m=$("body").height()
+m=n
+$("body").addClass("bd_bule")
+ new Swiper('.swiper-container', {
+        paginationClickable: true,
+        autoplay: 4000,
+        autoplayDisableOnInteraction: false,
+        watchSlidesVisibility: true,	
+        speed: 1000,
+        loop: true,
+        scrollbarHide: false,
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev'
+      })
+$(".file-upload").click(function(){
+	     $(".file").click()
+	 })
+$('.file').on("change",function(){
+		var file = this.files[0];
+		/*if($('.qr-code ul li').length == 4){
+			layer.msg('最多上传四张');
+			return false;
+		}*/
+        //判断是否是图片类型
+if (!/image\/\w+/.test(file.type)) {
+        	layer.msg("只能选择图片");
+        	return false;
+        }
+        var reader = new FileReader();																																																																																																											
+        reader.readAsDataURL(file);
+        reader.onload = function (e) {
+        	var img=this.result;
+    		var html='<li class=""><div class="v-img img-upload"><i></i><img src="'+img+'"><span class="delete-b"></span><div class="inner-mask yellow hidden">审核中</div><div class="inner-mask yellow bd-red hidden">审核失败</div></div></li>';
+    		$(".qr-code ul").prepend(html);	
+        }
+    });
+})
+</script>
+</body>
+
+</html>
